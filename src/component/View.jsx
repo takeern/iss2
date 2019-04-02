@@ -1,0 +1,77 @@
+import React, { PureComponent } from 'react';
+import { renderRoutes }from 'react-router-config';
+
+import '../static/css/index.less';
+
+export default class View extends PureComponent {
+    handleClick(e) {
+        let target = e.target;
+        while(!target.getAttribute('data-path') && target.className !== 'home-header') {
+            target = e.parentNode;
+        }
+        const path = target.getAttribute('data-path');
+        if (path) {
+            this.props.history.push(path);
+        }
+    }
+    render() {
+        const pathMap = [
+            {
+                name: 'Home',
+                index: 'home',
+            },
+            {
+                name: 'Journal',
+                index: 'journal',
+            },
+            {
+                name: 'Book',
+                index: 'book',
+            },
+            {
+                name: 'Conference Proceedings',
+                index: 'conferenceProceedings',
+            },
+            {
+                name: 'Contact Us',
+                index: 'contact',
+            },
+        ];
+        const showIndex = pathMap.map((item, index) => {
+            return <div className={window.location.pathname === `/${item.index}` ? 'select' : ''}
+            key={index} data-path={item.index}>{item.name}</div>;
+        });
+        const { route } = this.props;
+        return (
+            <div className='wraper'
+                style={{
+                    width: 1000,
+                    margin: '0 auto',
+                }}
+            >
+                <div className='home-header'
+                style={{
+                    color: 'white',
+                    fontWeight: 'bold',
+                    height: 50,
+                    borderBottom: '2px solid #f57605',
+                    font: 'bold 16px Verdana, Arial, Helvetica, Geneva, sans-serif',
+                    lineHeight: '50px',
+                    width: 1000,
+                    margin: '0 auto',
+                    display: 'flex',
+                    justifyContent: 'space-around',
+                    backgroundColor: '#3e8cca',
+                    cursor: 'pointer',
+                }}
+                onClick={(e) => this.handleClick(e)}
+                >
+                    {showIndex}
+                </div>
+                <div>
+                    {renderRoutes(route.routes)}
+                </div>
+            </div>
+        );
+    }    
+}
