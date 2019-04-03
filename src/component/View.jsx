@@ -19,26 +19,35 @@ export default class View extends PureComponent {
             {
                 name: 'Home',
                 index: 'home',
+                width: 177,
             },
             {
                 name: 'Journal',
                 index: 'journal',
+                width: 159,
             },
             {
                 name: 'Book',
                 index: 'book',
+                width: 134,
             },
             {
                 name: 'Conference Proceedings',
                 index: 'conferenceProceedings',
+                width: 330,
             },
             {
                 name: 'Contact Us',
                 index: 'contact',
+                width: 195,
             },
         ];
         const showIndex = pathMap.map((item, index) => {
             return <div className={window.location.pathname === `/${item.index}` ? 'select' : ''}
+            style={{
+                width: item.width + 'px',
+                textAlign: 'center',
+            }}
             key={index} data-path={item.index}>{item.name}</div>;
         });
         const { route } = this.props;
@@ -60,7 +69,6 @@ export default class View extends PureComponent {
                     width: 1000,
                     margin: '0 auto',
                     display: 'flex',
-                    justifyContent: 'space-around',
                     backgroundColor: '#3e8cca',
                     cursor: 'pointer',
                 }}

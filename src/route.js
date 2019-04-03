@@ -3,6 +3,7 @@ import Home from './component/Home';
 import Book from './component/Book';
 import Conference from './component/Conference';
 import Contact from './component/Contact';
+import Journal from './component/Journal';
 
 
 const routes = [
@@ -31,8 +32,14 @@ const routes = [
                 component: Contact,
                 exact: true,
             },
+            {
+                path: '/journal',
+                component: Journal,
+                exact: true,
+            },
         ],
     },
+    
 ];
 
 export default routes;

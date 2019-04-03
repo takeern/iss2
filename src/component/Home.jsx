@@ -10,26 +10,26 @@ export default class Home extends PureComponent {
         const pathMap = [
             {
                 name: 'Journal of Petroleum and Mining Engineering',
-                index: 'JPME',
+                index: '/journal?journal=JPME&page=introduce',
             },
             {
                 name: 'Journal of Research in Science and Engineering',
-                index: 'JRSE',
+                index: '/journal?journal=JRSE&page=introduce',
             },
             {
                 name: 'Journal of Research in Vocational Education',
-                index: 'JRVE',
+                index: '/journal?journal=JRVE&page=introduce',
             },
             {
                 name: 'Journal of Metallurgy and Materials Engineering',
-                index: 'JMME',
+                index: '/journal?journal=JMME&page=introduce',
             },
         ];
         return (
             <div className='home' style={{ marginTop: 10 }}>
                 <div className='left'>
                     <h4>Browser by journal</h4>
-                    <List pathMap={pathMap} />
+                    <List pathMap={pathMap} push={this.props.history.push}/>
                     <h4>Contact Us</h4>
                     <ul
                     className='ul-path-warpper'
