@@ -6,7 +6,7 @@ import Introduce from './Introduce';
 export default class View extends PureComponent {
     getParam(key) {
         const re = new RegExp(`[?&]${key}=([^&#]+)`, 'i');
-        const value =  window.location.href.match(re);
+        const value = window.location.href.match(re);
         return value && value[1] ? value[1] : null;
     }
     selectComponent(key, data) {
@@ -135,6 +135,42 @@ View.defaultProps = {
                 ],
             },
         ],
+        JGEBF: [
+            {
+                title: 'Introduction',
+                p: [
+                    "Journal of Global Economy, Business and Finance (JGEBF) is open access, peer-reviewed journal whose objectives is to publish original research papers related to the global economy, business and finance issues. This journal is also dedicated to disseminating the published articles freely for international academicians, researchers, practitioners, regulators, and public societies.",
+                    "The journal welcomes author from any institutional backgrounds and accepts rigorous empirical research paper with any methods or approach that is relevant to the global economy, business and finance context or content, as long as the research fits one of three salient disciplines: economics, business, or accounting.",
+                ],
+            },
+        ],
+        JPCE: [
+            {
+                title: 'Introduction',
+                p: [
+                    "Journal of Progress in Civil Engineering (JPCE), which is a part of Recent Science Journals provides a wide range of the highly technological, original, creative and quality publications covering a broad area of research activities in the Civil and Environmental Engineering sciences. It makes the exchange of scientific and practical knowledge; and information among technology professionals.",
+                    "Journal of Progress in Civil Engineering (JPCE) is a peer-reviewed, open access journal that publishes original research articles such as review articles, full-length papers, and short communications of original research work. The journal is seeking to provide a platform for engineers and academicians all over the world to promote, share, and discuss various new issues in civil and environmental fields. The journal includes a wide range of fields in its discipline to create a platform for the authors to make their contribution towards the journal and the editorial office promises a peer review process for the submitted manuscripts for the quality of publishing.",
+                    "Researchers and students of M.S., M.Phil and PhD are requested to send their original research articles to JPCE.",
+                ],
+            },
+        ],
+        JCMP: [
+            {
+                title: 'Introduction',
+                p: [
+                    "Journal of Contemporary Medical Practice (JCMP) is an initiative to encourage researchers, clinicians and individuals to share research advances the field of addiction medicine. The Journal of Contemporary Medical Practice is a unique platform that publishes current findings in science and medicine and promotes health and wellness. The editorial board of JCMP is a committed team of experts that ensures quality publishing of complete and reliable sources of information on discoveries and current developments in the field of Contemporary Medical Practice.",
+                    "It is a scientific, internationally refereed journal that publishes retrospective / prospective clinical and laboratory studies, interesting case presentations, invited collections, editorial letters, original images, short reports and surgical technical articles about every branch of medicine.",
+                ],
+            },
+        ],
+        JERP: [
+            {
+                title: 'Introduction',
+                p: [
+                    "Journal of Educational Research and Policies (JERP) is a new academic journal in the field of Educational Research and Policies. Works appropriate for publication in JERP include theoretical syntheses, conceptual models, position papers, literature reviews, and empirical research papers using quantitative or qualitative methods, or both.",
+                ],
+            },
+        ],
     },
     editorial: {
         JPME: [
@@ -248,6 +284,130 @@ View.defaultProps = {
                 ],
             },
         ],
+        JGEBF: [
+            {
+                title: "Editor-in-Chief",
+                p: [
+                    "Wuri Handayani, Ph.D",
+                    "Faculty of Economics and Business, Universitas Gadjah Mada, Indonesia",
+                ],
+            },
+            {
+                title: "Editors of sections",
+                p: [
+                    "Sekar Utami Setiastuti",
+                    "Ph.D., Faculty of Economics, and Business, Universitas Gadjah Mada, Indonesia",
+                    "Deden Dinar Iskandar",
+                    "Ph.D., Economics and Development Studies, Faculty of Economics and Business, Universitas Diponegoro, Indonesia",
+                    "Eddy Junarsin, Ph.D.",
+                    "Department of Management, Faculty of Economics and Business, Universitas Gadjah Mada, Indonesia",
+                ],
+            },
+            {
+                title: "Proofreaders",
+                p: [
+                    "Ignatius Roni Setyawan",
+                    "Ph.D., Faculty of Economics, Universitas Tarumanegara, Indonesia",
+                    "Whysnianti Basuki, Ph.D.",
+                    "School of Business, Law, and Communication Solent University, United Kingdom",
+                ],
+            },
+        ],
+        JPCE: [
+            {
+                title: "Editor-in-Chief",
+                p: [
+                    "Dr Emilio Bilotta",
+                    "Professor, Universita degli Studi di Napoli Frederico II Dipartimento di Ingegneria Idraulica, Geotecnica ed Ambientale, Italy",
+                ],
+            },
+            {
+                title: "Editors of sections",
+                p: [
+                    "Huriye Bilsel",
+                    "Geotechnical Engineering, Department of Civil Engineering, Eastern Mediterranean University, Famagusta, North Cyprus",
+                    "Mariacristina Bonini",
+                    "Research Assistant and Consultant in Geotechnical Engineering, Politecnico di Torino, Italy",
+                    "Edward Brylawski",
+                    "President, GEONOR Instrumentation, Milford, Pennsylvania USA",
+                    "Joseph A. Caliendo",
+                    "Department of Civil and Environmental Engineering, Utah State University, Logan UT USA",
+                    "Helder I. Chamin",
+                    "Professor-Coordenador, Departamento de Engenharia Geotnica ISEP|IPP, Porto, Portugal",
+                    "Dave H. Chan",
+                    "Department of Civil Engineering, University of Alberta, Edmonton, Alberta, Canada",
+                    "Deepankar Choudhury",
+                    "Associate Professor, Department of Civil Engineering, Indian Institute of Technology (IIT) Bombay, Powai, Mumbai, India",
+                ],
+            },
+            {
+                title: "Proofreaders",
+                p: [
+                    "David Toll",
+                    "Geotechnical Systems Group, School of Engineering, University of Durham, UK",
+                    "John R. Williams",
+                    "Director, Intelligent Engineering Systems Laboratory, Massachusetts Institute of Technology, Boston, Massachusetts, USA",
+                ],
+            },
+        ],
+        JCMP: [
+            {
+                title: "Editor-in-Chief",
+                p: [
+                    "Dr. Serkan TURSUN",
+                    "Department of Pediatrics, School of Medicine, Kırıkkale University, Kırıkkale",
+                ],
+            },
+            {
+                title: "Editors of sections",
+                p: [
+                    "Prof. Harun AKAR",
+                    "Department of Internal Medicine, Tepecik Training and Research Hospital, İzmir",
+                    "Dr. Alpaslan TUZCU",
+                    "Adjunct professor, Department of Endocrinology, School of Medicine, Dicle University, Diyarbakır",
+                ],
+            },
+            {
+                title: "Proofreaders",
+                p: [
+                    "Dr Fatih BATTAL",
+                    "Department of Pediatrics, School of Medicine, Çanakkale 18 Mart University, Çanakkale",
+                    "Dr. Meltem HENDEK",
+                    "Department of Periodontology, School of Medicine, Kırıkkale University, Kırıkkale",
+                    "Dr. Zaim JATIC",
+                    "Department of Family Medicine, Sarajevo, BOSNIA-HERZEGOVINA",
+                ],
+            },
+        ],
+        JERP: [
+            {
+                title: "Editor-in-Chief",
+                p: [
+                    "Dr. Jasper Campbell",
+                    "Faculty of Technology, Policy and Management Delft University of Technology",
+                ],
+            },
+            {
+                title: "Editors of sections",
+                p: [
+                    "Prof. M. Sultan Bhat",
+                    "Professor and Head, Department of Geography and Regional Development, University of Kashmir",
+                    "Dr. Benjamin Walker",
+                    "Adjunct professor, College of Engineering, Montana State University",
+                ],
+            },
+            {
+                title: "Proofreaders",
+                p: [
+                    "Dr Anthony Butcher",
+                    "Faculty of Electrical and Computer Engineering, University of Florida, USA",
+                    "Dr. Maxwell Johnson",
+                    "Canadian College of Health, Science, and Technology",
+                    "Dr. Dan Vandive",
+                    "Institute of Mechanical Engineers, Hong Kong",
+                ],
+            },
+        ],
     },
     authorGuide: [
         {
@@ -317,7 +477,7 @@ View.defaultProps = {
             title: 'Reviewers',
             p: [
                 'Reviewers should keep all information regarding papers confidential and treat them as privileged information. Reviews should be conducted objectively, with no personal criticism of the author, and reviewers should not review manuscripts in which they have conflicts of interest resulting from competitive, collaborative, or other relationships or connections with any of the authors, companies, or institutions connected to the papers.',
-                "Reviewers should express their views clearly with supporting arguments, and should identify relevant published work that has not been cited by the authors. Reviewers should also call to the editor's attention any substantial similarity or overlap between the manuscript under review and any other published paper."
+                "Reviewers should express their views clearly with supporting arguments, and should identify relevant published work that has not been cited by the authors. Reviewers should also call to the editor's attention any substantial similarity or overlap between the manuscript under review and any other published paper.",
             ],
         },
         {

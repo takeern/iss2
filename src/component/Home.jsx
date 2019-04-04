@@ -24,6 +24,22 @@ export default class Home extends PureComponent {
                 name: 'Journal of Metallurgy and Materials Engineering',
                 index: '/journal?journal=JMME&page=introduce',
             },
+            {
+                name: 'Journal of Global Economy, Business and Finance',
+                index: '/journal?journal=JGEBF&page=introduce',
+            },
+            {
+                name: 'Journal of Progress in Civil Engineering',
+                index: '/journal?journal=JMME&page=introduce',
+            },
+            {
+                name: 'Journal of Contemporary Medical Practice',
+                index: '/journal?journal=JCMP&page=introduce',
+            },
+            {
+                name: 'Journal of Educational Research and Policies',
+                index: '/journal?journal=JERP&page=introduce',
+            },
         ];
         return (
             <div className='home' style={{ marginTop: 10 }}>

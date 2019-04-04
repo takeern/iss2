@@ -13,6 +13,11 @@ const routes = [
         exact: false,
         routes: [
             {
+                path: '/',
+                component: Home,
+                exact: true,
+            },
+            {
                 path: '/home',
                 component: Home,
                 exact: true,
