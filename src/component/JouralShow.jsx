@@ -83,7 +83,7 @@ export default (props) => {
                 height: '250px',
                 margin: '10px 0',
             }}>
-                <img src={`/src/static/img/${item.name}.jpg`} width="200px" />
+                <img src={`/src/static/img/${item.name.toLowerCase()}.jpg`} width="200px" />
                 <div style={{
                     // display: 'inline-block',
                     marginLeft: '15px',
