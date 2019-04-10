@@ -14,30 +14,21 @@ export default () => {
                     marginTop: 35,
                     fontWeight: 400,
                 }}>
-                    <span style={{ fontFamily: 'Verdana', fontWeight: 900 }}>Isaac Scientific Publishing Co., Ltd</span>
+                    <span style={{ fontFamily: 'Verdana', fontWeight: 900 }}>Bryan House Publishing Limited</span>
                     <p style={{ margin: '30 0' }}>
 						<span style={{ fontFamily: 'Verdana' }}><span style={{ fontWeight: 900 }}>Address</span><br />
-                            Unit 04, 7/F Bright Way Tower, No. 33 Mong Kok Rd, Kowloon, Hong Kong 
+                        Flat 4, Huntingdon House Faulkers Farm Drive Edington, Birmingham West Midlans, United Kingdom, B23 7XF.
                         </span> 
 					</p>
                     <p>
-						<span style={{ fontFamily: 'Verdana', fontWeight: 900 }}>E-mail</span><br />
-                        <span style={{ fontFamily: 'Verdana' }}>For General Inquiry: </span><a href="mailto: service@isaacpub.org" target="_blank"><span style={{ fontFamily: 'Verdana' }}>service@isaacpub.org</span></a><br />
-                        <span style={{ fontFamily: 'Verdana' }}>For Book Publication: </span><a href="mailto: book@isaacpub.org" target="_blank"><span style={{ fontFamily: 'Verdana' }}>book@isaacpub.org</span></a><br />
-                        <span style={{ fontFamily: 'Verdana' }}>For Conference Proceedings Publication: </span><a href="mailto: confpub@isaacpub.org" target="_blank"><span style={{ fontFamily: 'Verdana' }}>confpub@isaacpub.org</span></a> 
+						<span style={{ fontFamily: 'Verdana', fontWeight: 900 }}>E-mail:</span><br />
+                        <span style={{ fontFamily: 'Verdana' }}></span><a href="mailto: service@bryanhousepub.org" target="_blank"><span style={{ fontFamily: 'Verdana' }}>service@bryanhousepub.org</span></a><br />
+					</p>
+                    <p>
+						<span style={{ fontFamily: 'Verdana', fontWeight: 900 }}>Telephone: </span><br />
+                        <span style={{ fontFamily: 'Verdana' }}>0044-121-7813744</span><br />
 					</p>
                 </div>
-            </div>
-            <div class="foot" style={{
-                paddingTop: 30,
-                minHeight: 50,
-                background: '#2065b2',
-                textAlign: 'center',
-                font: '16px Arial , Verdana , Helvetica , Geneva ,sans-serif',
-                color: '#fff',
-                marginTop: 70,
-            }}>
-                Copyright © 2019 Isaac Scientific Publishing Co. All rights reserved.
             </div>
         </div>
     );

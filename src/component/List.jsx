@@ -4,8 +4,7 @@ export default class List extends PureComponent {
     handleClick(e) {
         let target = e.target;
         while(!target.getAttribute('data-path') && target.className !== 'ul-path-warpper') {
-            target = e.parentNode;
-            
+            target = target.parentNode;
         }
         const path = target.getAttribute('data-path');
         if (path) {

@@ -28,6 +28,8 @@ export default class View extends PureComponent {
                 return this.props.editorial[journal];
             case('introduce'):
                 return this.props.introduce[journal];
+            case('articleFees'):
+                return this.props.articleFees;
             default: break;
         }
         return null;
@@ -65,6 +67,10 @@ export default class View extends PureComponent {
             {
                 name: 'Archive',
                 index: `/journal?journal=${journal}&page=archive`,
+            },
+            {
+                name: 'Article Processing Fees',
+                index: `/journal?journal=${journal}&page=articleFees`,
             },
         ];
         return (
@@ -168,6 +174,45 @@ View.defaultProps = {
                 title: 'Introduction',
                 p: [
                     "Journal of Educational Research and Policies (JERP) is a new academic journal in the field of Educational Research and Policies. Works appropriate for publication in JERP include theoretical syntheses, conceptual models, position papers, literature reviews, and empirical research papers using quantitative or qualitative methods, or both.",
+                ],
+            },
+        ],
+        IJER: [
+            {
+                title: 'Introduction',
+                p: [
+                    'International Journal of Environment Research (IJER) is a peer-reviewed, scholarly journal that aims to systematically develop the minds of aspiring scholars who seek to contribute to the academic community. The focus of the journal is academic research in all fields of Environmental Sciences and Sustainable Development; it includes all topics related to energy, pollution, nature conservation, the effects of climate change, biodiversity and ecology, soil science, water resources, recycling and management, organic farming, forestry and integrated crop management, planning, landscape, and other topics related to the environment.',
+                    'In accordance with the definition of open access journal, IJER is a model of the fully open journal that allows global open access to its content which is freely available without charge to users and institutions. They are allowed to read, download, copy, distribute, print, search, or link to the full texts of the articles, or use them for any other lawful purpose for non-commercial use, without asking prior permission from the publisher or the author.',
+                ],
+            },
+        ],
+        JES: [
+            {
+                title: 'Introduction',
+                p: [
+                    "Journal of Energy Science (JES) is a peer-reviewed, Open Access journal that publishes original research articles as well as review articles relating to the science and technology of energy generation, distribution, storage, and management. It also publishes studies into the environmental, societal, and economic impacts of energy use and policy.",
+                    "The journal welcomes articles relating to both renewable (biomass, hydropower, geothermal, solar, wind) and non-renewable energy (petroleum, natural gas, coal, nuclear), as well as energy use more generally.",
+                    "As well as original research, the Journal of Energy Science (JES) also publishes focused review articles that examine the state of the art, identify emerging trends, and suggest future directions for developing fields.",
+                ],
+            },
+        ],
+        JSSH: [
+            {
+                title: 'Introduction',
+                p: [
+                    "Journal of Social Science and Humanities (JSSH) is an international, peer-reviewed journal, correspondence in the fields of arts, commerce and social sciences. ",
+                    "The aim of JSSH is to publishes Original research Articles, Short Communications, Review Articles in Linguistics, Commerce, Anthropology, Sociology, Geography, Economics, History, Environmental Studies, Business Administration, Home Science, Public Health, Political Science, Demography, Cultural Studies, Ethnography and Sociolinguistics.",
+                    "All submitted articles should report original, previously unpublished research results, experimental or theoretical, and will be peer-reviewed. Articles submitted to the journal should meet these criteria and must not be under consideration for publication elsewhere. Manuscripts should follow the style of the journal and are subject to both review and editing.",
+                ],
+            },
+        ],
+        JAH: [
+            {
+                title: 'Introduction',
+                p: [
+                    "Journal of Agriculture and Horticulture (JAH) is an open access international Journal which aims to publish high quality scientific articles in the field of Horticulture & Agriculture. Our aim is to give an open space to scientists who can publish and deliver scientific knowledge about the relevant field for the people in the society.",
+                    "The scope of JAH includes medicinal plant research, growing of fruits and vegetables, garden crops, ornamental plants, plant protection and nutrition, genetic and breeding resources, storage technologies, agricultural economics, plant pathology, viticulture, and garden management. This Journal welcomes original articles from plant science researchers with new and improved technologies and innovations to support society in order to enhance quality and quantity of horticultural products.",
+                    "Journal of Agriculture and Horticulture (JAH) is a peer-reviewed journal which intents to publish most recent discoveries and latest developments in the form of review articles, mini review articles, short communications, editorials and opinion articles in all areas of horticulture field. These materials are freely available online and can be accessed any where across the globe without any subscriptions.",
                 ],
             },
         ],
@@ -408,6 +453,125 @@ View.defaultProps = {
                 ],
             },
         ],
+        IJER: [
+            {
+                title: "Editor-in-Chief",
+                p: [
+                    "Professor Anna Laura Pisello",
+                    "Assistant Professor of Applied Physics at University of Perugia, Visiting scholar at Columbia University and City University of New York. Post-doc fellow, and Winner of four international academic awards, Professor in national summer courses for PhD students in Applied Physics, Professor in graduate master classes - University of Perugia, Research contributor, Virginia Tech University.",
+                ],
+            },
+            {
+                title: "Editors of sections",
+                p: [
+                    "Professor Youba Sokona , Switzerland",
+                    "Professor Khairul Anuar bin Kassim , Malaysia",
+                    "Professor Alberto Muscio , Italy",
+                    "Professor Emmanuel Bozonnet , France",
+                    "Professor Sofoklis Makridis , Greece",
+                    "Professor Alessandro Di Graziano , Italy",
+                    "Professor Hasim Altan , United Arab Emirates",
+                    "Professor Crescenzo Petrone , Italy",
+                    "Professor Dinko Vukadinović , Croatia",
+                    "Professor Lucia Della Spina , Italy",
+                    "Dr Cristina Piselli , University of Perugia , Italy ",
+                ],
+            },
+            {
+                title: "Proofreaders",
+                p: [
+                    "Professor Lucia Della Spina , Italy",
+                    "Professor Fabio Naselli , Italy",
+                    "Professor Mahmoud Ghoneem , Egypt",
+                ],
+            },
+        ],
+        JES: [
+            {
+                title: "Editor-in-Chief",
+                p: [
+                    "Naim H. Afgan, Intituto Superiro Tecnico, Portugal",
+                ],
+            },
+            {
+                title: "Editors of sections",
+                p: [
+                    "Soteris Kalogirou, Cyprus University of Technology, Cyprus",
+                    "Tamas Kerekes, Aalborg University, Denmark",
+                    "Theodosios P. Korakianitis, Saint Louis University, USA",
+                    "David Kubicka, Technopark Kralupy University of Chemistry and Technology Prague, Czech Republic",
+                    "Francesco Lufrano, Consiglio Nazionale delle Ricerche, Italy",
+                    "Viviana C. Mariani, Pontifical Catholic University of Paraná, Brazil",
+                    "Alessandro Mauro, University of Napoli Parthenope, Italy",
+                    "Antonio Messineo, Università Kore di Enna, Italy",
+                ],
+            },
+            {
+                title: "Proofreaders",
+                p: [
+                    "S Venkata Mohan, CSIR Indian Institute of Chemical Technology, India",
+                    "Maurizio Volpe, Università degli Studi di Trento, Italy",
+                ],
+            },
+        ],
+        JSSH: [
+            {
+                title: "Editor-in-Chief",
+                p: [
+                    "Prof. Madya Dr Novel a/k Lyndon",
+                    "Faculty of Social Sciences and Humanities Universiti Kebangsaan Mal",
+                ],
+            },
+            {
+                title: "Editors of sections",
+                p: [
+                    "Prof. Madya Dr Abd Hair Awang",
+                    "School of Social, Development & Environmental Studies Faculty of Social Sciences and Humanities Universiti Kebangsaan Malaysir",
+                    "Assoc. Prof. Dr. Rahim Aman",
+                    "Pusat Pengajian Bahasa, Kesusasteraan dan Kebudayaan Melayu Universiti Kebangsaan Malaysia, Malaysia",
+                ],
+            },
+            {
+                title: "Proofreaders",
+                p: [
+                    "Ms Noviatin Binti Syarifuddin",
+                    "National University of Malaysia, Bangi, Malaysia",
+                    "Assoc Prof JALALUDDIN ABDUL MALEK",
+                    "Universiti Kebangsaan Malaysia, MalaysiaDr. Dan Vandive",
+                ],
+            },
+        ],
+        JAH: [
+            {
+                title: "Editor-in-Chief",
+                p: [
+                    "Ratikanta Ghosh",
+                    "Bidhan Chandra Krishi Viswavidyalaya , India",
+                ],
+            },
+            {
+                title: "Editors of sections",
+                p: [
+                    "Joseph J. Molnar ",
+                    "Auburn University, USA",
+                    "Hosam O. Elansary",
+                    "Alexandria University, Egypt",
+                    "Karim Sorkheh ",
+                    "Daffodil International University (DIU), Bangladesh",
+                    "Kalyan Chakraborti",
+                    "Bidhan Chandra Krishi Viswavidyalaya , India",
+                ],
+            },
+            {
+                title: "Proofreaders",
+                p: [
+                    "Majid Abdoli",
+                    "Islamic Azad University, Iran",
+                    "Jiban Shrestha",
+                    "Coordinator at National Commercial Agriculture Research Program, Nepal",
+                ],
+            },
+        ],
     },
     authorGuide: [
         {
@@ -493,6 +657,14 @@ View.defaultProps = {
             p: [
                 "In an open access model, the publication costs of an article are paid from an author's research budget, or by their supporting institution, in the form of Article Processing Charges. These Article Processing Charges replace subscription charges and allow publishers to make the full-text of every published article freely available to all interested readers.",
                 "Publishing an article in Frontiers in Management Research requires Article Processing Charges that will be billed to the submitting author following the acceptance of an article for publication. Apart from these Article Process Charges, there are no charges for submission and paper review. The fees to be paid following the acceptance of an article are $199. ",
+            ],
+        },
+    ],
+    articleFees: [
+        {
+            title: "",
+            p: [
+                'Bryan House Publishing Limited is entirely not-for-profit, so the article processing charge (APC) is free, and there are no article submission charges, page charges, or color charges.',
             ],
         },
     ],

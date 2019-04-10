@@ -19,27 +19,17 @@ export default class View extends PureComponent {
             {
                 name: 'Home',
                 index: 'home',
-                width: 177,
+                width: 333,
             },
             {
                 name: 'Journal',
-                index: 'journal',
-                width: 159,
-            },
-            {
-                name: 'Book',
-                index: 'book',
-                width: 134,
-            },
-            {
-                name: 'Conference Proceedings',
-                index: 'conferenceProceedings',
-                width: 330,
+                index: 'journals',
+                width: 333,
             },
             {
                 name: 'Contact Us',
                 index: 'contact',
-                width: 195,
+                width: 333,
             },
         ];
         const showIndex = pathMap.map((item, index) => {
@@ -78,6 +68,18 @@ export default class View extends PureComponent {
                 </div>
                 <div>
                     {renderRoutes(route.routes)}
+                </div>
+                <div class="foot" style={{
+                    paddingTop: 30,
+                    minHeight: 50,
+                    background: '#2065b2',
+                    textAlign: 'center',
+                    font: '16px Arial , Verdana , Helvetica , Geneva ,sans-serif',
+                    color: '#fff',
+                    marginTop: 70,
+                    width: 1000,
+                }}>
+                    Copyright © 2019 Bryan House Publishing Limited. All rights reserved.
                 </div>
             </div>
         );

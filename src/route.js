@@ -1,9 +1,8 @@
 import View from './component/View.jsx';
 import Home from './component/Home';
-import Book from './component/Book';
-import Conference from './component/Conference';
 import Contact from './component/Contact';
 import Journal from './component/Journal';
+import JournalShow from './component/JouralShow';
 
 
 const routes = [
@@ -23,16 +22,6 @@ const routes = [
                 exact: true,
             },
             {
-                path: '/book',
-                component: Book,
-                exact: true,
-            },
-            {
-                path: '/conferenceProceedings',
-                component: Conference,
-                exact: true,
-            },
-            {
                 path: '/contact',
                 component: Contact,
                 exact: true,
@@ -40,6 +29,11 @@ const routes = [
             {
                 path: '/journal',
                 component: Journal,
+                exact: true,
+            },
+            {
+                path: '/journals',
+                component: JournalShow,
                 exact: true,
             },
         ],
