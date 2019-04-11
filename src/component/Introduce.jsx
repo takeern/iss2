@@ -20,9 +20,33 @@ export default (props) => {
             </div>
         );
     });
+
+    const imgShow = (
+        <div style={{
+            marginTop: 60,
+        }}>
+            <img src={`/src/static/img/${props.journal.toLowerCase()}.jpg`} width='150px'/>
+        </div>
+    );
+    
+    const journalTitle = (
+        <p style={{
+            textAlign: 'end',
+            fontSize: 18,
+            fontHeight: 700,
+            color: 'blue',
+            marginBottom: 20,
+        }}>{data[0].name}</p>
+    );
     return (
-        <div className={props.key}>
-            {showList}
+        <div className={props.page} style={{
+            display: 'flex',
+        }}>
+            {props.page === 'introduce' && imgShow}
+            <div>
+                {props.page === 'introduce' && journalTitle}
+                {showList}
+            </div>
         </div>
     );
 };

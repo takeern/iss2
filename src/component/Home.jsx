@@ -6,6 +6,16 @@ import List from './List';
 import '../static/css/home.less';
 
 export default class Home extends PureComponent {
+    handleClick(e) {
+        let target = e.target;
+        while(!target.getAttribute('data-path') && target.className !== 'path-wrapper') {
+            target = target.parentNode;
+        }
+        const path = target.getAttribute('data-path');
+        if (path) {
+            this.props.history.push(`/journal?journal=${path}&page=introduce`);
+        }
+    }
     render () {
         const pathMap = [
             {
@@ -130,28 +140,31 @@ export default class Home extends PureComponent {
                     <h4 style={{
                         fontSize: 25,
                     }}>Feature Journals</h4>
-                    <div style={{
+                    <div 
+                    className='path-wrapper'
+                    onClick={(e) => this.handleClick(e)}
+                    style={{
                         display: 'flex',
                         justifyContent: 'space-between',
                         textAlign: 'center',
                     }}>
-                        <div>
+                        <div data-path="JRVE">
                             <img src='/src/static/img/jrve.jpg' width='130px'/>
                             <p>JRVE</p>
                         </div>
-                        <div>
+                        <div data-path="JRSE">
                             <img src='/src/static/img/jrse.jpg' width='130px'/>
                             <p>JRSE</p>
                         </div>
-                        <div>
+                        <div data-path="JPME">
                             <img src='/src/static/img/jpme.jpg' width='130px'/>
                             <p>JPME</p>
                         </div>
-                        <div>
+                        <div data-path="JAH">
                             <img src='/src/static/img/jah.jpg' width='130px'/>
                             <p>JAH</p>
                         </div>
-                        <div>
+                        <div data-path="JSSH">
                             <img src='/src/static/img/jssh.jpg' width='130px'/>
                             <p>JSSH</p>
                         </div>

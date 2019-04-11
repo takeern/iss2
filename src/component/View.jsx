@@ -76,7 +76,7 @@ export default class View extends PureComponent {
                     textAlign: 'center',
                     font: '16px Arial , Verdana , Helvetica , Geneva ,sans-serif',
                     color: '#fff',
-                    marginTop: 70,
+                    marginTop: 25,
                     width: 1000,
                 }}>
                     Copyright © 2019 Bryan House Publishing Limited. All rights reserved.
