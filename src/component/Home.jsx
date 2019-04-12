@@ -147,6 +147,7 @@ export default class Home extends PureComponent {
                         display: 'flex',
                         justifyContent: 'space-between',
                         textAlign: 'center',
+                        cursor: 'pointer',
                     }}>
                         <div data-path="JRVE">
                             <img src='/src/static/img/jrve.jpg' width='130px'/>

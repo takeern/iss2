@@ -26,6 +26,21 @@ export default (props) => {
             marginTop: 60,
         }}>
             <img src={`/src/static/img/${props.journal.toLowerCase()}.jpg`} width='150px'/>
+            <div style={{
+                margin: 0,
+                textIndent: 0,
+                textAlign: 'initial',
+                fontSize: 13,
+            }}>
+                <p>ISSN: <span>{data[0].iSSN}</span></p>
+                <p>Frequency: <span>{data[0].frequency ? data[0].frequency : '12 Issues per Year'}</span></p>
+                <p>Accepted Language: <span>{data[0].language ? data[0].language : 'English'}</span></p>
+                <p>Submit Email: </p>
+                <p style={{
+                    fontWeight: 600,
+                    fontSize: 16,
+                }}>{data[0].email}</p>
+            </div>
         </div>
     );
     

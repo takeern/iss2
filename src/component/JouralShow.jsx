@@ -62,6 +62,18 @@ export default (props) => {
             email: 'jes@bryanhousepub.org',
             name: 'JES',
         },
+        {
+            title: 'Journal of Social Science and Humanities (JSSH)',
+            iSSN: '1811-1564',
+            email: 'jssh@bryanhousepub.org',
+            name: 'JSSH',
+        },
+        {
+            title: 'Journal of Agriculture and Horticulture (JAH)',
+            iSSN: '1711-8239',
+            email: 'jah@bryanhousepub.org',
+            name: 'JAH',
+        },
     ];
     const handleClick = (e) => {
         let target = e.target;
@@ -93,7 +105,7 @@ export default (props) => {
                     <p>ISSN: {item.iSSN}</p>
                     <p>Frequency: {item.frequency ? item.frequency : '12 Issues per Year'}</p>
                     <p>Accepted Language: {item.language ? item.language : 'English'}</p>
-                    <p>Email:</p>
+                    <p>Submit Email:</p>
                     <p>{item.email}</p>
                 </div>
             </div>
