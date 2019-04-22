@@ -47,9 +47,9 @@ export default (props) => {
             fontHeight: 700,
             color: '#35b8f3',
             textDecoration: 'underline',
-            position: 'absolute',
-            left: 100,
-            top: 170,
+            position: 'relative',
+            top: -40,
+            left: -400,
             fontStyle: 'oblique',
         }}>{data[0].name}</p>
     );
