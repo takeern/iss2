@@ -23,7 +23,7 @@ export default (props) => {
 
     const imgShow = (
         <div style={{
-            marginTop: 60,
+            marginTop: 20,
         }}>
             <img src={`/src/static/img/${props.journal.toLowerCase()}.jpg`} width='150px'/>
             <div style={{
@@ -32,30 +32,31 @@ export default (props) => {
                 textAlign: 'initial',
                 fontSize: 13,
             }}>
-                <p>ISSN: <span>{data[0].iSSN}</span></p>
-                <p>Frequency: <span>{data[0].frequency ? data[0].frequency : '12 Issues per Year'}</span></p>
-                <p>Accepted Language: <span>{data[0].language ? data[0].language : 'English'}</span></p>
-                <p>Submit Email: </p>
-                <p style={{
-                    fontWeight: 600,
-                    fontSize: 16,
-                }}>{data[0].email}</p>
+                <p><span>ISSN: </span><br />{data[0].iSSN}</p>
+                <p><span>Frequency: </span><br />{data[0].frequency ? data[0].frequency : '12 Issues per Year'}</p>
+                <p><span>Accepted Language: </span><br />{data[0].language ? data[0].language : 'English'}</p>
+                <p><span>Submit Email: </span></p>
+                <p>{data[0].email}</p>
             </div>
         </div>
     );
     
     const journalTitle = (
         <p style={{
-            textAlign: 'end',
-            fontSize: 18,
+            fontSize: 23,
             fontHeight: 700,
-            color: 'blue',
-            marginBottom: 20,
+            color: '#35b8f3',
+            textDecoration: 'underline',
+            position: 'absolute',
+            left: 100,
+            top: 170,
+            fontStyle: 'oblique',
         }}>{data[0].name}</p>
     );
     return (
         <div className={props.page} style={{
             display: 'flex',
+            paddingTop: 30,
         }}>
             {props.page === 'introduce' && imgShow}
             <div>

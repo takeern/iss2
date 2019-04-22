@@ -78,9 +78,9 @@ export default class View extends PureComponent {
                 display: 'flex',
             }}>
                 <div className='left' style={{
-                    marginTop: 86,
+                    marginTop: 80,
                 }}>
-                    <List pathMap={pathMap} push={this.props.history.push}/>
+                    <List pathMap={pathMap} push={this.props.history.push} page={page}/>
                 </div>
                 <div className='journalRight'>
                     {showComponent}
@@ -95,7 +95,7 @@ View.defaultProps = {
     introduce: {
         JPME: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     'Journal of Petroleum and Mining Engineering (JPME) is an internationally peer reviewed, open access journal that publishes manuscripts under all aspects of petroleum and gas engineering studies , Mining Engineering, Safety Technology and Engineering, Mineral Processing, Coalfield Geology, Geotechnical Engineering.',
                     'Papers submitted in this journal must be original, and of a quality that would be of interest to an international readership. Manuscripts submitted to this journal are subject to a peer review process, which involves an international panel of researchers who are expert in relevant fields. It also publishes book reviews of potential interest to readers. The journal is published in both print and online versions. The online version of the journal is free access and downloads.',
@@ -107,7 +107,7 @@ View.defaultProps = {
         ],
         JRSE: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     'Journal of Research in Science and Engineering (JRSE) is a peer-reviewed, monthly, online international refereed journal, which publishes original articles, research articles, review articles with top-level work from all areas of Engineering Research and their application including Mechanical, Civil, Electrical, Chemical, Electronics, Mathematics and Geological etc. Researchers in all technology and engineering fields are encouraged to contribute articles based on recent research. Journal publishes research articles and reviews within the whole field of Engineering Research, and it will continue to provide information on the latest trends and developments in this ever-expanding subject.',
                     'Online Engineering is the future trend in engineering and science. This journal covers almost all disciplines of engineering and applied sciences. ',
@@ -120,7 +120,7 @@ View.defaultProps = {
         ],
         JRVE: [
             {
-                title: "About This Journal",
+                // title: 'About This Journal',
                 p: [
                     "Journal of Research in Vocational Education (JRVE) is a new academic journal in the field of Vocational Education and Training (VET). It publishes empirical work in all fields of VET from basic VET to continuous or adult learning. ",
                     "Works appropriate for publication in JRVE include theoretical syntheses, conceptual models, position papers, literature reviews, and empirical research papers using quantitative or qualitative methods, or both.",
@@ -132,7 +132,7 @@ View.defaultProps = {
         ],
         JMME: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     "Journal of Metallurgy and Materials Engineering (JMME) is a new academic journal in the field of Metallurgy and mining industry . Aims and goals of our project are the exchange of theoretical and empirical researches in the field of metallurgy and ore mining industry. The journal represents a unique collection of scientific articles, detailed overview of equipment and production processes, presentation of the latest advances in the field of information technologies, materials science, engineering pedagogics, economy, etc.",
                     "The main audience of the journal is represented by scientists of all spheres which belong to metallurgical and ore mining industry, heads of iron and steel enterprises, graduates and students, metal traders.",
@@ -144,7 +144,7 @@ View.defaultProps = {
         ],
         JGEBF: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     "Journal of Global Economy, Business and Finance (JGEBF) is open access, peer-reviewed journal whose objectives is to publish original research papers related to the global economy, business and finance issues. This journal is also dedicated to disseminating the published articles freely for international academicians, researchers, practitioners, regulators, and public societies.",
                     "The journal welcomes author from any institutional backgrounds and accepts rigorous empirical research paper with any methods or approach that is relevant to the global economy, business and finance context or content, as long as the research fits one of three salient disciplines: economics, business, or accounting.",
@@ -156,7 +156,7 @@ View.defaultProps = {
         ],
         JPCE: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     "Journal of Progress in Civil Engineering (JPCE), which is a part of Recent Science Journals provides a wide range of the highly technological, original, creative and quality publications covering a broad area of research activities in the Civil and Environmental Engineering sciences. It makes the exchange of scientific and practical knowledge; and information among technology professionals.",
                     "Journal of Progress in Civil Engineering (JPCE) is a peer-reviewed, open access journal that publishes original research articles such as review articles, full-length papers, and short communications of original research work. The journal is seeking to provide a platform for engineers and academicians all over the world to promote, share, and discuss various new issues in civil and environmental fields. The journal includes a wide range of fields in its discipline to create a platform for the authors to make their contribution towards the journal and the editorial office promises a peer review process for the submitted manuscripts for the quality of publishing.",
@@ -169,7 +169,7 @@ View.defaultProps = {
         ],
         JCMP: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     "Journal of Contemporary Medical Practice (JCMP) is an initiative to encourage researchers, clinicians and individuals to share research advances the field of addiction medicine. The Journal of Contemporary Medical Practice is a unique platform that publishes current findings in science and medicine and promotes health and wellness. The editorial board of JCMP is a committed team of experts that ensures quality publishing of complete and reliable sources of information on discoveries and current developments in the field of Contemporary Medical Practice.",
                     "It is a scientific, internationally refereed journal that publishes retrospective / prospective clinical and laboratory studies, interesting case presentations, invited collections, editorial letters, original images, short reports and surgical technical articles about every branch of medicine.",
@@ -181,7 +181,7 @@ View.defaultProps = {
         ],
         JERP: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     "Journal of Educational Research and Policies (JERP) is a new academic journal in the field of Educational Research and Policies. Works appropriate for publication in JERP include theoretical syntheses, conceptual models, position papers, literature reviews, and empirical research papers using quantitative or qualitative methods, or both.",
                 ],
@@ -192,7 +192,7 @@ View.defaultProps = {
         ],
         IJER: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     'International Journal of Environment Research (IJER) is a peer-reviewed, scholarly journal that aims to systematically develop the minds of aspiring scholars who seek to contribute to the academic community. The focus of the journal is academic research in all fields of Environmental Sciences and Sustainable Development; it includes all topics related to energy, pollution, nature conservation, the effects of climate change, biodiversity and ecology, soil science, water resources, recycling and management, organic farming, forestry and integrated crop management, planning, landscape, and other topics related to the environment.',
                     'In accordance with the definition of open access journal, IJER is a model of the fully open journal that allows global open access to its content which is freely available without charge to users and institutions. They are allowed to read, download, copy, distribute, print, search, or link to the full texts of the articles, or use them for any other lawful purpose for non-commercial use, without asking prior permission from the publisher or the author.',
@@ -204,7 +204,7 @@ View.defaultProps = {
         ],
         JES: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     "Journal of Energy Science (JES) is a peer-reviewed, Open Access journal that publishes original research articles as well as review articles relating to the science and technology of energy generation, distribution, storage, and management. It also publishes studies into the environmental, societal, and economic impacts of energy use and policy.",
                     "The journal welcomes articles relating to both renewable (biomass, hydropower, geothermal, solar, wind) and non-renewable energy (petroleum, natural gas, coal, nuclear), as well as energy use more generally.",
@@ -217,7 +217,7 @@ View.defaultProps = {
         ],
         JSSH: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     "Journal of Social Science and Humanities (JSSH) is an international, peer-reviewed journal, correspondence in the fields of arts, commerce and social sciences. ",
                     "The aim of JSSH is to publishes Original research Articles, Short Communications, Review Articles in Linguistics, Commerce, Anthropology, Sociology, Geography, Economics, History, Environmental Studies, Business Administration, Home Science, Public Health, Political Science, Demography, Cultural Studies, Ethnography and Sociolinguistics.",
@@ -230,7 +230,7 @@ View.defaultProps = {
         ],
         JAH: [
             {
-                title: 'About This Journal',
+                // title: 'About This Journal',
                 p: [
                     "Journal of Agriculture and Horticulture (JAH) is an open access international Journal which aims to publish high quality scientific articles in the field of Horticulture & Agriculture. Our aim is to give an open space to scientists who can publish and deliver scientific knowledge about the relevant field for the people in the society.",
                     "The scope of JAH includes medicinal plant research, growing of fruits and vegetables, garden crops, ornamental plants, plant protection and nutrition, genetic and breeding resources, storage technologies, agricultural economics, plant pathology, viticulture, and garden management. This Journal welcomes original articles from plant science researchers with new and improved technologies and innovations to support society in order to enhance quality and quantity of horticultural products.",
@@ -613,7 +613,7 @@ View.defaultProps = {
                     'Keywords',
                     'References',
                 ],
-                'For MS-Word template, please click here.',
+                'For MS-Word template, please <a href="/src/static/pdf/Template.doc">click</a> here.',
                 'For Latex template, please click here.',
             ],
         },
@@ -659,7 +659,7 @@ View.defaultProps = {
                     'is not currently being considered for publication elsewhere.',
                 ],
                 'All Authors mentioned in the paper must have significantly contributed to the research. Authors must state that all data in the paper are real and authentic, and must identify all sources used in the creation of their manuscript. Also, authors are obliged to provide retractions or corrections of mistakes.',
-                "The submitting author is responsible for ensuring that the article's publication has been approved by all the other coauthors. It is also the authors' responsibility to ensure that the articles emanating from a particular institution are submitted with the approval of the necessary institution. Authors must notify the editors of any conflicts of interest, and must also report any errors they discover in their published paper to the editors. By submitting a paper the author understands and agrees that its copyright is transferred to Isaac Scientific Publishing.",
+                "The submitting author is responsible for ensuring that the article's publication has been approved by all the other coauthors. It is also the authors' responsibility to ensure that the articles emanating from a particular institution are submitted with the approval of the necessary institution. Authors must notify the editors of any conflicts of interest, and must also report any errors they discover in their published paper to the editors. By submitting a paper the author understands and agrees that its copyright is transferred to Bryan House Publishing Limited.",
             ],
         },
         {

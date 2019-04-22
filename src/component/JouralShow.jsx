@@ -11,7 +11,7 @@ export default (props) => {
         {
             title: 'Journal of Progress in Civil Engineering (JPCE)',
             iSSN: ' 2322-0856',
-            email: 'jmme@bryanhousepub.org',
+            email: 'jpce@bryanhousepub.org',
             name: 'JPCE',
         },
         {

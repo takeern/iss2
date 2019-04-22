@@ -12,9 +12,13 @@ export default class List extends PureComponent {
         }
     }
     render() {
-        const { pathMap } = this.props;
+        const { pathMap, page } = this.props;
         const showIndex = pathMap.map((item, index) => {
+            const isVisited = item.index.indexOf(page) !== -1;
             return <li 
+            style={isVisited ? {
+                backgroundColor: 'darkgray',
+            } : {}}
             key={index} 
             data-path={item.index}
             ><span className='san'></span>{item.name}</li>;

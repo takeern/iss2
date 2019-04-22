@@ -48,7 +48,7 @@ export default class View extends PureComponent {
                     margin: '0 auto',
                 }}
             >
-                <img src='/src/static/img/logo.jpg' width='1000px' style={{
+                <img src='/src/static/img/logo.jpeg' width='1000px' style={{
                     display: 'block',
                 }}/>
                 <div className='home-header'

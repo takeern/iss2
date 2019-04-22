@@ -138,7 +138,7 @@ export default class Home extends PureComponent {
                     <div><span>Bryan House Publishing Limited</span> is dedicated to increasing depths of subjects across disciplines with the ultimate aim of expanding knowledge in science. We strive to provide the best service to the public, scientists, professors, students, industries, and academic institutions. We will make the best efforts to publish all the valuable works as soon as possible. One key request to researchers across the world is unrestricted access to research publications. Open access gives a worldwide audience larger than that of any subscription-based journal, and thus increases the visibility and impact of published works. It also enhances indexing, retrieval power, and eliminates the need for permissions to reproduce and distribute content. </div>
                     <div><span>Bryan House Publishing Limited is entirely not-for-profit, so the article processing charge (APC) is free, and there are no article submission charges, page charges, or color charges.</span></div>
                     <h4 style={{
-                        fontSize: 25,
+                        fontSize: 20,
                     }}>Feature Journals</h4>
                     <div 
                     className='path-wrapper'

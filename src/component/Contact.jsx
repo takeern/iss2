@@ -5,14 +5,15 @@ export default () => {
         <div>
             <div style={{
                 display: 'flex',
-                marginTop: 25,
+                marginTop: 60,
                 marginLeft: 64,
+                marginBottom: 200,
             }}>
-                <img src='./src/static/img/phone.png' width={279} height={227}/>
+                <img src='./src/static/img/phone.jpg' width={300} height={168}/>
                 <div style={{
                     fontSize: 15,
-                    marginTop: 35,
                     fontWeight: 400,
+                    marginLeft: 35,
                 }}>
                     <span style={{ fontFamily: 'Verdana', fontWeight: 900 }}>Bryan House Publishing Limited</span>
                     <p style={{ margin: '30 0' }}>

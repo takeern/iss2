@@ -13,7 +13,7 @@ export default () => {
                     marginTop: 35,
                     fontWeight: 400,
                 }}>
-                    <div>Isaac Scientific Publishing publishes proceedings for academic and technical conferences and provides professional and timely services to conference organizers.</div>
+                    <div>Bryan House Publishing Limited publishes proceedings for academic and technical conferences and provides professional and timely services to conference organizers.</div>
                     <br />
                     <div>We provide flexible options on proceedings production, including hard copy, CD/DVD ROM, e-Book, flash memory and so on. We also offer "Open Access" option so that the conference papers could be freely downloaded and their visibility and influence would be effectively increased. Besides, we provide flexible options on the post-conference sell of the proceedings.</div>
                     <br />
@@ -32,7 +32,7 @@ export default () => {
                 color: '#fff',
                 marginTop: 70,
             }}>
-                Copyright © 2019 Isaac Scientific Publishing Co. All rights reserved.
+                Copyright © 2019 Bryan House Publishing Limited Co. All rights reserved.
             </div>
         </div>
     );
