@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default (props) => {
-    const { data } = props;
+    const { data, title } = props;
     // console.log(dta)
     const showList = data.map((item, index) => {
         const { title, p } = item;
@@ -43,7 +43,7 @@ export default (props) => {
     
     const journalTitle = (
         <p style={{
-            fontSize: 23,
+            fontSize: 20,
             fontHeight: 700,
             color: '#35b8f3',
             textDecoration: 'underline',
@@ -51,16 +51,16 @@ export default (props) => {
             top: -40,
             left: -400,
             fontStyle: 'oblique',
-        }}>{data[0].name}</p>
+        }}>{title}</p>
     );
     return (
         <div className={props.page} style={{
             display: 'flex',
             paddingTop: 30,
         }}>
-            {props.page === 'introduce' && imgShow}
+            {imgShow}
             <div>
-                {props.page === 'introduce' && journalTitle}
+                {journalTitle}
                 {showList}
             </div>
         </div>

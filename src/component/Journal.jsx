@@ -42,7 +42,8 @@ export default class View extends PureComponent {
             page = 'introduce';
         }
         const data = this.getData(page, journal);
-        const showComponent = <Introduce data={data} page={page} journal={journal}/>;
+        const title = this.props.name[journal];
+        const showComponent = <Introduce data={data} page={page} journal={journal} title={title}/>;
         const pathMap = [
             {
                 name: 'About This Journal',
@@ -92,6 +93,20 @@ export default class View extends PureComponent {
 }
 
 View.defaultProps = {
+    name: {
+        JPME: 'Journal of Petroleum and Mining Engineering (JPME)',
+        JRSE: 'Journal of Research in Science and Engineering (JRSE)',
+        JRVE: 'Journal of Metallurgy and Materials Engineering (JMME)',
+        JMME: 'Journal of Metallurgy and Materials Engineering (JMME)',
+        JGEBF: 'Journal of Global Economy, Business and Finance (JGEBF)',
+        JPCE: 'Journal of Progress in Civil Engineering (JPCE)',
+        JCMP: 'Journal of Progress in Civil Engineering (JPCE)',
+        JERP: 'Journal of Educational Research and Policies (JERP)',
+        IJER: 'International Journal of Environment Research (IJER)',
+        JES: 'Journal of Energy Science (JES)',
+        JSSH: 'Journal of Social Science and Humanities (JSSH)',
+        JAH: 'Journal of Agriculture and Horticulture (JAH)',
+    },
     introduce: {
         JPME: [
             {
