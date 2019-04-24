@@ -115,7 +115,7 @@ export default class Home extends PureComponent {
                 display: 'flex', 
             }}>
                 <div className='left'>
-                    <h4>Browser by journal</h4>
+                    <h4>Browse By Journal Name</h4>
                     <List pathMap={pathMap} push={this.props.history.push}/>
                     <h4>Valuable Links</h4>
                     <ul className='ul-path-warpper' style={{ textAlign: 'center' }}>

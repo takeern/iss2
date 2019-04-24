@@ -19,17 +19,22 @@ export default class View extends PureComponent {
             {
                 name: 'Home',
                 index: 'home',
-                width: 333,
+                width: 250,
             },
             {
                 name: 'Journal',
                 index: 'journals',
-                width: 333,
+                width: 250,
+            },
+            {
+                name: 'Conference',
+                index: 'conference',
+                width: 250,
             },
             {
                 name: 'Contact Us',
                 index: 'contact',
-                width: 333,
+                width: 250,
             },
         ];
         const showIndex = pathMap.map((item, index) => {
@@ -48,7 +53,7 @@ export default class View extends PureComponent {
                     margin: '0 auto',
                 }}
             >
-                <img src='/src/static/img/logo.jpeg' width='1000px' style={{
+                <img src='/src/static/img/logo.bmp' width='1000px' style={{
                     display: 'block',
                 }}/>
                 <div className='home-header'

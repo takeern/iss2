@@ -17,7 +17,7 @@ export default class List extends PureComponent {
             const isVisited = item.index.indexOf(page) !== -1;
             return <li 
             style={isVisited ? {
-                backgroundColor: 'darkgray',
+                backgroundColor: '#edf5f9',
             } : {}}
             key={index} 
             data-path={item.index}

@@ -3,6 +3,7 @@ import Home from './component/Home';
 import Contact from './component/Contact';
 import Journal from './component/Journal';
 import JournalShow from './component/JouralShow';
+import Conference from './component/Conference';
 
 
 const routes = [
@@ -36,6 +37,11 @@ const routes = [
                 component: JournalShow,
                 exact: true,
             },
+            {
+                path: '/conference',
+                component: Conference,
+                exact: true,
+            }
         ],
     },
     

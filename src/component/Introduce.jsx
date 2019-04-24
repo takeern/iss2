@@ -54,14 +54,22 @@ export default (props) => {
         }}>{title}</p>
     );
     return (
-        <div className={props.page} style={{
-            display: 'flex',
-            paddingTop: 30,
-        }}>
-            {imgShow}
-            <div>
-                {journalTitle}
-                {showList}
+        <div className={props.page} >
+            <img src={`/src/static/img/${props.journal.toLowerCase()}-fm.png`}  style={{
+                width: 500,
+                marginLeft: -190,
+                marginTop: -10,
+            }}/>
+            <div style={{
+                display: 'flex',
+                // paddingTop: 30,
+                marginTop: -4,
+            }}>
+                {props.page === 'introduce' && imgShow}
+                <div>
+                    {/* {journalTitle} */}
+                    {showList}
+                </div>
             </div>
         </div>
     );
