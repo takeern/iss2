@@ -12,6 +12,7 @@ require('@babel/register')({
 
 require('./lib/server');
 
+// require('./parsePage/test.js');
 
 // var WebpackIsomorphicTools = require('webpack-isomorphic-tools')
 // global.webpackIsomorphicTools = new WebpackIsomorphicTools(require('./webpack/webpack-isomorphic-config'))

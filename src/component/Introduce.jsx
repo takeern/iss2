@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default (props) => {
-    const { data, title } = props;
+    const { data } = props;
     // console.log(dta)
     const showList = data.map((item, index) => {
         const { title, p } = item;
@@ -25,7 +25,7 @@ export default (props) => {
         <div style={{
             marginTop: 20,
         }}>
-            <img src={`/src/static/img/${props.journal.toLowerCase()}.jpg`} width='150px'/>
+            <img src={`/src/static/img/${props.journal.toLowerCase()}.jpg`} width='150px' style={{ marginLeft: -23 }}/>
             <div style={{
                 margin: 0,
                 textIndent: 0,
@@ -41,18 +41,18 @@ export default (props) => {
         </div>
     );
     
-    const journalTitle = (
-        <p style={{
-            fontSize: 20,
-            fontHeight: 700,
-            color: '#35b8f3',
-            textDecoration: 'underline',
-            position: 'relative',
-            top: -40,
-            left: -400,
-            fontStyle: 'oblique',
-        }}>{title}</p>
-    );
+    // const journalTitle = (
+    //     <p style={{
+    //         fontSize: 20,
+    //         fontHeight: 700,
+    //         color: '#35b8f3',
+    //         textDecoration: 'underline',
+    //         position: 'relative',
+    //         top: -40,
+    //         left: -400,
+    //         fontStyle: 'oblique',
+    //     }}>{title}</p>
+    // );
     return (
         <div className={props.page} >
             <img src={`/src/static/img/${props.journal.toLowerCase()}-fm.png`}  style={{

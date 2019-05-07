@@ -41,7 +41,7 @@ const routes = [
                 path: '/conference',
                 component: Conference,
                 exact: true,
-            }
+            },
         ],
     },
     

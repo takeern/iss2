@@ -2,6 +2,7 @@
 import React, { PureComponent } from 'react';
 import List from './List';
 import Introduce from './Introduce';
+import Issue from './CurrentIssue';
 
 export default class View extends PureComponent {
     getParam(key) {
@@ -41,9 +42,13 @@ export default class View extends PureComponent {
             journal = 'JPME';
             page = 'introduce';
         }
+
+        // if()
         const data = this.getData(page, journal);
         const title = this.props.name[journal];
-        const showComponent = <Introduce data={data} page={page} journal={journal} title={title}/>;
+
+        const showComponent = data ? <Introduce data={data} page={page} journal={journal} title={title}/>
+                            : <Issue journal={journal}/>
         const pathMap = [
             {
                 name: 'About This Journal',
@@ -629,7 +634,6 @@ View.defaultProps = {
                     'References',
                 ],
                 'For MS-Word template, please <a href="/src/static/pdf/Template.doc">click</a> here.',
-                'For Latex template, please click here.',
             ],
         },
         {
