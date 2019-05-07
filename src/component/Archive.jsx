@@ -39,7 +39,8 @@ export default class IssueList extends Component {
         // console.log(volume.split(' '));
         const year = target.getAttribute('data-year');
         const mouth = target.getAttribute('data-mouth');
-        this.props.history.push(`/issue?time=${year}&mouth=${mouth}&volume=${volume}`);
+        console.log(this.props);
+        this.props.push(`/journal?journal=${this.props.journal}&page=issueList&time=${year}&mouth=${mouth}&volume=${volume}`);
     }
 
     parseTime(time) {
@@ -145,7 +146,9 @@ export default class IssueList extends Component {
 
         return(
             <div className='issue-list'>
-                <h1>All Previous Issues</h1>
+                <h1 style={{
+                    fontSize: 20,
+                }}>All Previous Issues</h1>
                 {showList}
             </div>
         );

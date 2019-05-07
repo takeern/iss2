@@ -4,6 +4,7 @@ import List from './List';
 import Introduce from './Introduce';
 import Issue from './CurrentIssue';
 import Archive from './Archive';
+import IssueList from './IssueList';
 
 export default class View extends PureComponent {
     getParam(key) {
@@ -51,7 +52,9 @@ export default class View extends PureComponent {
         if (page === 'currentIssue') {
             showComponent = <Issue journal={journal}/>;
         } else if (page === 'archive') {
-            showComponent = <Archive journal={journal}/>;
+            showComponent = <Archive journal={journal} push={this.props.history.push}/>;
+        } else if (page === 'issueList') {
+            showComponent = <IssueList journal={journal}/>;
         } else {
             showComponent = <Introduce data={data} page={page} journal={journal} title={title}/>;
         }
@@ -95,7 +98,9 @@ export default class View extends PureComponent {
                 }}>
                     <List pathMap={pathMap} push={this.props.history.push} page={page}/>
                 </div>
-                <div className='journalRight'>
+                <div className='journalRight' style={{
+                    width: '100%',
+                }}>
                     {showComponent}
                 </div>
 
