@@ -75,20 +75,10 @@ export default class CurrentAchieve extends PureComponent {
             );
         });
         const times = time.split('-');
-        // const mouth = this.props
         return (
             <div className='issue'>
                 <h2 style={{ textAlign:'center' }}>Volume {volume} Issue {times[2]},   {this.getMouth()} {times[0]}</h2>
                 {showList}
-                {/* <div style={{display:'flex',justifyContent:'center'}}>
-                    <div className='button' onClick={() => this.delPage()}>
-                        {backward}
-                    </div>
-                    <span style={{padding:'0 15px', lineHeight:'32px', display:'inline-block'}}>{pageIndex}</span>
-                    <div className='button' onClick={() => this.addPage()}>
-                        {forward}
-                    </div>
-                </div> */}
             </div>
         );
     }

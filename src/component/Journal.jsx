@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react';
 import List from './List';
 import Introduce from './Introduce';
 import Issue from './CurrentIssue';
+import Archive from './Archive';
 
 export default class View extends PureComponent {
     getParam(key) {
@@ -46,9 +47,15 @@ export default class View extends PureComponent {
         // if()
         const data = this.getData(page, journal);
         const title = this.props.name[journal];
+        let showComponent;
+        if (page === 'currentIssue') {
+            showComponent = <Issue journal={journal}/>;
+        } else if (page === 'archive') {
+            showComponent = <Archive journal={journal}/>;
+        } else {
+            showComponent = <Introduce data={data} page={page} journal={journal} title={title}/>;
+        }
 
-        const showComponent = data ? <Introduce data={data} page={page} journal={journal} title={title}/>
-                            : <Issue journal={journal}/>
         const pathMap = [
             {
                 name: 'About This Journal',
