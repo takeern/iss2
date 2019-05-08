@@ -2,20 +2,12 @@ const fs = require('fs');
 let year = 2019;
 let mouth = 1;
 let day = 1;
-let allData = {};
-const command = 'getPage'; // getPage or getList
-const { warp } = require('./getPdfNumber');
-let numLenth = 0;
-let currentTime = false;
-let firstTime = false;
-
 
 const removeNO = function (item) {
     return !!(item.trim());
 };
 
 function addTime(str) {
-    // console.log(str)
     const arr = str.split('-');
     const newArr = arr.map(item => parseInt(item));
     newArr[2] += 1;
@@ -31,42 +23,39 @@ function addTime(str) {
     return newArr.join('-');
 }
 
-function getTxt(time, journal, callback) {
+function getTxt(time, journal, journalData, command, currentTime, firstTime, numLength) {
     fs.readFile(`./${journal}-${time}.txt`, 'utf8', (err, data) => {
         if (err) {
             if(err.code === 'ENOENT') {
                 const newTime = addTime(time);
-                if(newTime) return getTxt(newTime, journal, callback);
-                show();
-                writeFile(journal);
-                callback(allData);
+                if(newTime) return getTxt(newTime, journal, journalData, command, currentTime, firstTime, numLength);
+                const writeData = show(journalData, command, currentTime, firstTime, numLength);
+                writeFile(journal, command, writeData);
             }else {
                 throw err;
             }
         } else {
-            const parseData = praseTxt(data, time);
+            const parseData = parseTxt(data);
             currentTime = time;
             if(!firstTime) firstTime = time;
 
             if(command === 'getList') {
-                if(parseData.length !== 0) allData[time] = parseData.length;
+                if(parseData.length !== 0) journalData[time] = parseData.length;
             }else {
-                if(parseData.length !== 0) allData[time] = parseData;
+                if(parseData.length !== 0) journalData[time] = parseData;
             }
 
-            numLenth += 1;
+            numLength += 1;
 
             const newTime = addTime(time);
-            if(newTime) return getTxt(newTime, journal, callback);
-            show();
-            writeFile(journal);
-            allData = {};
-            callback(allData);
+            if(newTime) return getTxt(newTime, journal, journalData, command, currentTime, firstTime, numLength);
+            const writeData = show(journalData, command, currentTime, firstTime, numLength);
+            writeFile(journal, command, writeData);
         }
     });
 }
 
-function praseTxt (data, time) {
+function parseTxt (data) {
     const arr = [];
     const list = data.split(/(\r\n)+/).filter(removeNO);
     // console.log(list.length, time)
@@ -80,26 +69,27 @@ function praseTxt (data, time) {
     return arr;
 }
 
-function show() {
+function show(journalData, command, currentTime, firstTime, numLength) {
     // console.log(allData);
     if(command === 'getList') {
-        allData = {
-            data: Object.assign(allData, {}),
-            length: numLenth,
+        return {
+            data: Object.assign(journalData, {}),
+            length: numLength,
             currentTime,
             firstTime,
         };
-    }
+    } 
+    return journalData;
 }
 
-function writeFile(journal) {
+function writeFile(journal, command, writeData) {
     if(command === 'getList') { //每个目录数量
-        fs.writeFile(`./${journal}-pageList.json`, JSON.stringify(allData), (err) => {
+        fs.writeFile(`./${journal}-pageList.json`, JSON.stringify(writeData), (err) => {
             if(err) console.log(err);
         });
     }
     if(command === 'getPage') { //每个page 详细信息
-        fs.writeFile(`./${journal}-page.json`, JSON.stringify(allData), (err) => {
+        fs.writeFile(`./${journal}-page.json`, JSON.stringify(writeData), (err) => {
             if(err) console.log(err);
         });
     }
@@ -107,31 +97,24 @@ function writeFile(journal) {
 
 const time = `${year}-${mouth}-${day}`;
 
-const wrapTxt = (time, journal) => {
-    return new Promise(resolve => {
-        getTxt(time, journal, resolve);
-    });
-};
-
-wrapTxt(time, 'IJER');
-// module.exports = {
-//     wrapTxt,
-// }
-// const journals = [
-//     'IJER',
-//     'JRVE',
-//     'JPCE',
-//     'JPME',
-//     'JCMP',
-//     'JRSE',
-//     'JERP',
-//     'JMME',
-//     'IJER',
-//     'JGEBF',
-//     'JES',
-//     'JSSH',
-//     'JAH',
-// ];
+const journals = [
+    'IJER',
+    'JRVE',
+    'JPCE',
+    'JPME',
+    'JCMP',
+    'JRSE',
+    'JERP',
+    'JMME',
+    'JGEBF',
+    'JES',
+    'JSSH',
+    'JAH',
+];
+journals.map(item => {
+    getTxt(time, item, {}, 'getPage', {}, false, false, 0);
+    getTxt(time, item, {}, 'getList', {}, false, false, 0);
+});
 // async function testPdfToTxt() {
 //     let testStatus = true;
 
