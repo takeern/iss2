@@ -170,9 +170,12 @@ export default class Home extends PureComponent {
                             <p>JSSH</p>
                         </div>
                     </div>
-                    <h4 style={{
-                        fontSize: 25,
+                    {/* <h4 style={{
+                        fontSize: 20,
                     }}>Recently Published Papers</h4>
+                    <div>
+                        <a></a>
+                    </div> */}
                 </div>
             </div> 
         );
