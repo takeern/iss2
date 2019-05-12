@@ -55,7 +55,7 @@ export default class Issue extends Component {
                     <div style={{
                         marginLeft: 30,
                         textIndent: 0,
-                    }}><a href={`./src/assets/pdf/${time}_${index + 1}.pdf`}>{item.title}</a></div>
+                    }}><a href={`./src/static/pdf/${time}_${index + 1}.pdf`}>{item.title}</a></div>
                     <p style={{
                         marginLeft: 30,
                     }}>{item.name}</p>
