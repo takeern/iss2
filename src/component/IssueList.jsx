@@ -68,7 +68,12 @@ export default class Issue extends Component {
         }
         return (
             <div className='issue'>
-                <h1 style={{ textAlign:'center' }}>Volume {volume} Issue {times[2]}, {mouth} {times[0]}</h1>
+                <img src={`/src/static/img/${this.props.journal.toLowerCase()}-fm.png`}  style={{
+                    width: 500,
+                    marginLeft: -190,
+                    marginTop: -10,
+                 }}/>
+                <h1 style={{ textAlign:'center',  marginTop: 10 }}>Volume {volume} Issue {times[2]}, {mouth} {times[0]}</h1>
                 {showList}
             </div>
         );

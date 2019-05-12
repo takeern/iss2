@@ -23,17 +23,6 @@ export default () => {
                         <a href='mailto:book@bryanhousepub.org' style={{ fontWeight: 700, }}> book@bryanhousepub.org</a> if you want to publish the proceedings of your conference, and we will get back to you as soon as possible.</div>
                 </div>
             </div>
-            <div class="foot" style={{
-                paddingTop: 30,
-                minHeight: 50,
-                background: '#2065b2',
-                textAlign: 'center',
-                font: '16px Arial , Verdana , Helvetica , Geneva ,sans-serif',
-                color: '#fff',
-                marginTop: 70,
-            }}>
-                Copyright © 2019 Bryan House Publishing Limited Co. All rights reserved.
-            </div>
         </div>
     );
 };
