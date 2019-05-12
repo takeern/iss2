@@ -67,7 +67,7 @@ export default class CurrentAchieve extends PureComponent {
                     <div style={{
                         marginLeft: 30,
                         textIndent: 0,
-                    }}><a href={`./src/static/pdf/${time}_${index + 1}.pdf`}>{item.title}</a></div>
+                    }}><a href={`./src/static/pdf/${this.props.journal}-${time}_${index + 1}.pdf`}>{item.title}</a></div>
                     <p style={{
                         marginLeft: 30,
                     }}>{item.name}</p>
