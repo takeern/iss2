@@ -44,7 +44,7 @@ export default class Issue extends Component {
             });
     }
     render() {
-        const { data, time, volume, mouth } = this.state;
+        let { data, time, volume, mouth } = this.state;
         if(!data) return null;
 
         const showList = data.map((item, index) => {
@@ -62,6 +62,10 @@ export default class Issue extends Component {
             );
         });
         const times = time.split('-');
+        console.log(times);
+        if (times[0] == 2018 && times[1] == 1 && times[2] == 1) {
+            mouth = 'December';
+        }
         return (
             <div className='issue'>
                 <h1 style={{ textAlign:'center' }}>Volume {volume} Issue {times[2]}, {mouth} {times[0]}</h1>

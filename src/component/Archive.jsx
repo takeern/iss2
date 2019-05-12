@@ -113,7 +113,7 @@ export default class IssueList extends Component {
                 k += j;
                 return <li key={index} data-year={items[0]} data-mouth={mouth[k]} onClick={(e) => this.onClick(e)}><a>Volume {i-startTime+1} {items[1]} {mouth[k]} {items[2]}</a></li>;
             });
-            if(i >= 2018) {
+            if(i > 2018) {
                 list = ul[i].map((item, index) => {
                     const items = item.split('|');
                     return <li 
@@ -126,6 +126,19 @@ export default class IssueList extends Component {
                     </li>;
                 });
             }
+            if (i === 2018) {
+                list = ul[i].map((item, index) => {
+                    const items = item.split('|');
+                    return <li 
+                    key={index} 
+                    data-year={items[0]} 
+                    data-mouth={mouth[k]} 
+                    onClick={(e) => this.onClick(e)}
+                    >
+                        <a>Volume {i-startTime+1} {items[1]} December {items[2]}</a>
+                    </li>;
+                });
+            }  
             if(i === 2014) {
                 let _motuh_2014 = [ 'July', 'Septembe', 'December' ];
                 list = ul[i].map((item, index) => {
