@@ -77,7 +77,12 @@ export default class CurrentAchieve extends PureComponent {
         const times = time.split('-');
         return (
             <div className='issue'>
-                <h2 style={{ textAlign:'center' }}>Volume {volume} Issue {times[2]},   {this.getMouth()} {times[0]}</h2>
+                <img src={`/src/static/img/${this.props.journal.toLowerCase()}-fm.png`}  style={{
+                    width: 500,
+                    marginLeft: -190,
+                    marginTop: -10,
+                 }}/>
+                <h2 style={{ textAlign:'center', marginTop: 10 }}>Volume {volume} Issue {times[2]},   {this.getMouth()} {times[0]}</h2>
                 {showList}
             </div>
         );

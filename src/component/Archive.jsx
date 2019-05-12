@@ -146,8 +146,14 @@ export default class IssueList extends Component {
 
         return(
             <div className='issue-list'>
+                <img src={`/src/static/img/${this.props.journal.toLowerCase()}-fm.png`}  style={{
+                    width: 500,
+                    marginLeft: -190,
+                    marginTop: -10,
+                 }}/>
                 <h1 style={{
                     fontSize: 20,
+                    marginTop: 12,
                 }}>All Previous Issues</h1>
                 {showList}
             </div>

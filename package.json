@@ -19,7 +19,7 @@
       }
     },
     "start": {
-      "command": "webpack-dev-server  --host 0.0.0.0 --progress --config ./config/webpack.development.js",
+      "command": "webpack-dev-server  --progress --config ./config/webpack.development.js",
       "env": {
         "NODE_ENV": "dev"
       }
@@ -66,6 +66,7 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "webpack": "^4.27.0"
+    "webpack": "^4.27.0",
+    "webpack-dev-server": "^3.3.1"
   }
 }
