@@ -119,7 +119,7 @@ export default class IssueList extends Component {
                     return <li 
                     key={index} 
                     data-year={items[0]} 
-                    data-mouth={mouth[k]} 
+                    data-mouth={mouth[index]} 
                     onClick={(e) => this.onClick(e)}
                     >
                         <a>Volume {i-startTime+1} {items[1]} {mouth[index]} {items[2]}</a>
