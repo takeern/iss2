@@ -117,7 +117,7 @@ export default class Home extends PureComponent {
                 <div className='left'>
                     <h4>Browse By Journal Name</h4>
                     <List pathMap={pathMap} push={this.props.history.push}/>
-                    <h4>Valuable Links</h4>
+                    {/* <h4>Valuable Links</h4> */}
                     {/* <ul className='ul-path-warpper' style={{ textAlign: 'center' }}>
                         {imgList}
                     </ul>  */}
