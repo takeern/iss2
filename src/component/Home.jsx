@@ -118,9 +118,9 @@ export default class Home extends PureComponent {
                     <h4>Browse By Journal Name</h4>
                     <List pathMap={pathMap} push={this.props.history.push}/>
                     <h4>Valuable Links</h4>
-                    <ul className='ul-path-warpper' style={{ textAlign: 'center' }}>
+                    {/* <ul className='ul-path-warpper' style={{ textAlign: 'center' }}>
                         {imgList}
-                    </ul> 
+                    </ul>  */}
                     <h4>Contact Us</h4>
                     <ul className='ul-path-warpper'>
                         <li><span className='san' /> <a href='mailto:contact@bryanhousepub.org' 
