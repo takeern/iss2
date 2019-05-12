@@ -20,7 +20,7 @@ export default () => {
                     <div>We understand many conferences are organized by professors and their teams who lack experiences on conference organization, and we can give considerate and detailed guidance and instructions on proceedings publication and all the related issues.</div>
                     <br />
                     <div>Please contact
-                        <a href='mailto:book@isaacpub.org' style={{ fontWeight: 700, }}> book@isaacpub.org</a> if you want to publish the proceedings of your conference, and we will get back to you as soon as possible.</div>
+                        <a href='mailto:book@bryanhousepub.org' style={{ fontWeight: 700, }}> book@bryanhousepub.org</a> if you want to publish the proceedings of your conference, and we will get back to you as soon as possible.</div>
                 </div>
             </div>
             <div class="foot" style={{
