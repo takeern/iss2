@@ -7,8 +7,9 @@ Ahmed M. Zaidan Mohanad J. Al-Asadi
 Libyan Oil Sales forecasting using ARIMA models
 Mustafa. M. Ali. Alf Aki, Prof. Dr. Ajet paul& Dr. (Ms.): Shalini B. Masih
 
-Decision support system designed to optimize maintenance and operation processes in petrochemical industry based On Markov Decision Approach
-G.R. Esmaeilian, A. Divani poor, M. Kaazemi, A. Tahan
+A Review of Application of Biological Enzyme in Oil and Gas Field Production
+Jing Tang, Shangqi Shao, Wengang Ding, Xinle Xu
 
-Frozen Heat: The Next Fossil Fuel
-Harsh K. Anjirwala
+
+Research Progress and Prospect of Acidizing Process and Acid Fracturing Technology
+Jing Tang, Shangqi Shao, Wengang Ding, Ruoxuan Tang
