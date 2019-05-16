@@ -117,10 +117,10 @@ export default class Home extends PureComponent {
                 <div className='left'>
                     <h4>Browse By Journal Name</h4>
                     <List pathMap={pathMap} push={this.props.history.push}/>
-                    {/* <h4>Valuable Links</h4> */}
-                    {/* <ul className='ul-path-warpper' style={{ textAlign: 'center' }}>
+                    <h4>Valuable Links</h4>
+                    <ul className='ul-path-warpper' style={{ textAlign: 'center' }}>
                         {imgList}
-                    </ul>  */}
+                    </ul> 
                     <h4>Contact Us</h4>
                     <ul className='ul-path-warpper'>
                         <li><span className='san' /> <a href='mailto:contact@bryanhousepub.org' 
@@ -170,12 +170,21 @@ export default class Home extends PureComponent {
                             <p>JSSH</p>
                         </div>
                     </div>
-                    {/* <h4 style={{
+                    <h4 style={{
                         fontSize: 20,
                     }}>Recently Published Papers</h4>
-                    <div>
-                        <a></a>
-                    </div> */}
+                    <div className='recent_page'>
+                        <div><hr /><div><a href="./src/static/pdf/JRVE-2019-1-3_1.pdf">﻿Effective creative strategies on Educational native buildings’ Designers’ treatment</a></div><p >Malihe Soleimani sadr, Sayedeh Marzieh Tabaeian</p></div>
+                        <div><hr /><div><a href="./src/static/pdf/JRVE-2019-1-3_2.pdf">Optimal design and suitable media for e-learning effectiveness: A student-driven choice</a></div><p >Anna Thysiadou, Sofoklis Christoforidis, Panagiotis Jannakoudakis</p></div>
+                        <div><hr /><div><a href="./src/static/pdf/JRSE-2019-1-3_1.pdf">﻿Full Factorial Experimental Design Applied to Photocatalytic Decolorization of a Cationic Azo Dye in Solar Photo-reactor</a></div><p >M.K. Bouchareb, M. Bouhelassa, and M. Berkani</p></div>
+                        <div><hr /><div><a href="./src/static/pdf/JRSE-2019-1-3_2.pdf">A PreliminaryAssessmentofCotton Gin Waste-MixtureCo-gasificationPerformance</a></div><p >Elita R Widjaya, Guangnan Chen, Leslie Bowtell, and Catherine Hills</p></div>
+                        <div><hr /><div><a href="./src/static/pdf/JRSE-2019-1-3_3.pdf">Characterization of Physico-Chemical Properties of Arachis HypogaeaL. Shells (Groundnut) as Environmental Remidation</a></div><p >Grandawa, Musa Mohammed</p></div>
+                        <div><hr /><div><a href="./src/static/pdf/JRSE-2019-1-3_4.pdf">Optimization Stimulant Gas for Several Tapping System Models since the Start of Opening</a></div><p >Mudita Oktorina Nugrahani, Akhmad Rouf, Yoga Bagus S. Aji, and Setiono</p></div>
+                        {/* <div><hr /><div><a href="./src/static/pdf/JRSE-2019-1-3_4.pdf">Optimization Stimulant Gas for Several Tapping System Models since the Start of Opening</a></div><p >Mudita Oktorina Nugrahani, Akhmad Rouf, Yoga Bagus S. Aji, and Setiono</p></div> */}
+                        <div><hr /><div><a href="./src/static/pdf/JRSE-2019-1-3_5.pdf">Separation of Olefin/Paraffin Binary Gas Mixture through Hollow Fiber Gas-Liquid Membrane Contactor</a></div><p >Nayef Ghasem, Mohamed Al-Marzouqi, Zahoor Ismail</p></div>
+                        <div><hr /><div><a href="./src/static/pdf/JSSH-2019-1-3_1.pdf">﻿Emerging Trends in Skill Development for Empowering Women</a></div><p >Tanu Jain, Dr. Reena Verma, Prof. (Dr.) R.P.Agarwal</p></div>
+
+                    </div>
                 </div>
             </div> 
         );
