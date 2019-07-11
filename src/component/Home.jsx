@@ -69,24 +69,20 @@ export default class Home extends PureComponent {
         ];
         const arr = [
             {
+                href: 'http://scholar.cnki.net/WebPress/brief.aspx?dbcode=SJLF',
+                img: '/src/static/img/cnki.jpg',
+            },
+            {
                 href: 'https://goo.gl/8y5KYk',
                 img: '/src/static/img/semantic.jpg',
             },
             {
-                href: '#',
-                img: '/src/static/img/niscair.jpg',
-            },
-            {
                 href: 'https://search.crossref.org/?q=2319-7064',
-                img: '/src/static/img/CrossRef.jpg',
+                img: '/src/static/img/CrossRef.png',
             },
             {
                 href: 'https://goo.gl/d1n3Uy',
                 img: '/src/static/img/ResearchGate_Logo.png',
-            },
-            {
-                href: 'https://goo.gl/dKTpxy',
-                img: '/src/static/img/research-bible.jpg',
             },
             {
                 href: 'https://goo.gl/NvH8d3',
@@ -94,11 +90,7 @@ export default class Home extends PureComponent {
             },
             {
                 href: 'https://goo.gl/x9jQZc',
-                img: '/src/static/img/worldcat.jpg',
-            },
-            {
-                href: 'https://ijsr.academia.edu/IjsrnetEditorial',
-                img: '/src/static/img/academia.png',
+                img: '/src/static/img/worldcat.png',
             },
         ];
         const imgList = arr.map((item, index) => 
@@ -112,7 +104,9 @@ export default class Home extends PureComponent {
         return (
             <div className='home' style={{ 
                 marginTop: 10,
-                display: 'flex', 
+                display: 'flex',
+                'fontFamily': 'Verdana',
+                'lineHeight': 1.5,
             }}>
                 <div className='left'>
                     <h4>Browse By Journal Name</h4>
