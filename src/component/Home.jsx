@@ -69,10 +69,6 @@ export default class Home extends PureComponent {
         ];
         const arr = [
             {
-                href: 'http://scholar.cnki.net/WebPress/brief.aspx?dbcode=SJLF',
-                img: '/src/static/img/cnki.jpg',
-            },
-            {
                 href: 'https://goo.gl/8y5KYk',
                 img: '/src/static/img/semantic.jpg',
             },
