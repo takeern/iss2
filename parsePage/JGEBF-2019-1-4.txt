@@ -1,0 +1,3 @@
+﻿Hybrid Differential Evolution For Combined Heat And Power Economic Dispatch Problem
+Chao-Lung Chiang
+

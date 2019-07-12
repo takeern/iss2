@@ -1,0 +1,7 @@
+﻿Prediction of Twist at Ultimate Torque of Ferrocement “U” Wrapped RCC Beams
+G.C. Behera, M.R.Dhal
+Shape Effects of Wind Induced Response on Tall Buildings Using CFD
+Sanket Lohade, Dr. Sanjay Kulkarni
+Effect of Sampling Rates Variation during Cylindricity Error Evaluation
+Amira A. Khattab, Yasmine Abouelseoud, Mohammad A. Younes
+
