@@ -6,6 +6,8 @@ export default () => {
             <div style={{
                 display: 'flex',
                 marginTop: 25,
+                fontFamily: 'Verdana',
+                lineHeight: 1.5,
             }}>
                 <img src='./src/static/img/talk.png' width={250}/>
                 <div style={{

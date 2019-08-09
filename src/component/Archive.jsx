@@ -39,7 +39,6 @@ export default class IssueList extends Component {
         // console.log(volume.split(' '));
         const year = target.getAttribute('data-year');
         const mouth = target.getAttribute('data-mouth');
-        console.log(this.props);
         this.props.push(`/journal?journal=${this.props.journal}&page=issueList&time=${year}&mouth=${mouth}&volume=${volume}`);
     }
 

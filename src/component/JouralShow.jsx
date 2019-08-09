@@ -115,6 +115,8 @@ export default (props) => {
         <div className="journals-content" style={{
             display: 'flex',
             flexFlow: 'wrap',
+            fontFamily: 'Verdana',
+            lineHeight: 1.5,
         }}>
             {showList}
         </div>

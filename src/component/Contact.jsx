@@ -2,7 +2,10 @@ import React from 'react';
 
 export default () => {
     return(
-        <div>
+        <div style={{
+            fontFamily: 'Verdana',
+            lineHeight: 1.5,
+        }}>
             <div style={{
                 display: 'flex',
                 marginTop: 60,

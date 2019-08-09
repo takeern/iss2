@@ -92,6 +92,8 @@ export default class View extends PureComponent {
         return (
             <div style={{
                 display: 'flex',
+                fontFamily: 'Verdana',
+                lineHeight: 1.5,
             }}>
                 <div className='left' style={{
                     marginTop: 80,
