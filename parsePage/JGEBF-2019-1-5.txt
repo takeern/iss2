@@ -1,0 +1,2 @@
+﻿An Optimal Replenishment Policy under Conditions of Permissible Delay in Payment and Shortages
+Shih-Ming Ou
