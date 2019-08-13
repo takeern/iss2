@@ -40,7 +40,7 @@ export default class Home extends PureComponent {
             },
             {
                 name: 'Journal of Progress in Civil Engineering',
-                index: '/journal?journal=JMME&page=introduce',
+                index: '/journal?journal=JPCE&page=introduce',
             },
             {
                 name: 'Journal of Contemporary Medical Practice',
