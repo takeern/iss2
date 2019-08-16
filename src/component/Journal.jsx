@@ -653,7 +653,7 @@ View.defaultProps = {
         {
             title: 'Submission',
             p: [
-                'Each manuscript should be submitted by one of its authors through the manuscript tracking system. However, if you have difficulties in accessing the manuscript tracking system, e-mail submissions to JPME@ centuryscipub.org are also accepted.',
+                'Each manuscript should be submitted by one of its authors through the manuscript tracking system. However, if you have difficulties in accessing the manuscript tracking system, e-mail submissions to JPME@bryanhousepub.org are also accepted.',
             ],
         },
         {
