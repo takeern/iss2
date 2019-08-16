@@ -136,7 +136,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Petroleum and Mining Engineering (JPME)',
                 iSSN: '1110-6506',
-                email: 'jpme@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JRSE: [
@@ -149,7 +149,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Research in Science and Engineering (JRSE)',
                 iSSN: '1656-1996',
-                email: 'jrse@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JRVE: [
@@ -161,7 +161,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Research in Vocational Education (JRVE)',
                 iSSN: '2408-5170',
-                email: 'jrve@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JMME: [
@@ -173,7 +173,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Metallurgy and Materials Engineering (JMME)',
                 iSSN: '2006-1919',
-                email: 'jmme@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JGEBF: [
@@ -185,7 +185,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Global Economy, Business and Finance (JGEBF)',
                 iSSN: '2141-5595',
-                email: 'jgebf@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JPCE: [
@@ -198,7 +198,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Progress in Civil Engineering (JPCE)',
                 iSSN: ' 2322-0856',
-                email: 'jmme@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JCMP: [
@@ -210,7 +210,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Contemporary Medical Practice (JCMP)',
                 iSSN: '2006-2745',
-                email: 'jcmp@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JERP: [
@@ -221,7 +221,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Educational Research and Policies (JERP)',
                 iSSN: '2006-1137',
-                email: 'jerp@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         IJER: [
@@ -233,7 +233,7 @@ View.defaultProps = {
                 ],
                 name: 'International Journal of Environment Research (IJER)',
                 iSSN: '1595-4080',
-                email: 'ijer@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JES: [
@@ -246,7 +246,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Energy Science (JES)',
                 iSSN: '1689-8338',
-                email: 'jes@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JSSH: [
@@ -259,7 +259,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Social Science and Humanities (JSSH)',
                 iSSN: '1811-1564',
-                email: 'jssh@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
         JAH: [
@@ -272,7 +272,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Agriculture and Horticulture (JAH)',
                 iSSN: '1711-8239',
-                email: 'jah@bryanhousepub.org',
+                email: 'submission@bryanhousepub.org',
             },
         ],
     },
