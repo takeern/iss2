@@ -11,4 +11,5 @@ node_modules
 webpack.config.js
 package-lock.json
 .npmignore
-
+*.pdf
+/src/static/pdf
