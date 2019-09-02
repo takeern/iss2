@@ -115,25 +115,3 @@ journals.map(item => {
     getTxt(time, item, {}, 'getPage', {}, false, false, 0);
     getTxt(time, item, {}, 'getList', {}, false, false, 0);
 });
-// async function testPdfToTxt() {
-//     let testStatus = true;
-
-//     console.log('开始解析pdf');
-//     const pdf = await warp(time);
-//     console.log('解析pdf成功');
-
-//     console.log('开始解析目录');
-//     const txt = await wrapTxt(time);
-//     console.log('解析目录成功');
-//     pdf.map(item => {
-//         const {time, number} = item;
-//         if(txt[time] !== number) {
-//             console.log(`目录:${time}.txt 解析论文数量为${txt[time]?txt[time]:0}，与实际获取pdf数量:${number}不符合`);
-//             testStatus = false;
-//         }
-//     })
-//     const logData = testStatus? 'pdf与目录数量对应成功' : 'pdf与目录数量对应失败' ;
-//     console.log(logData);
-// }
-
-// testPdfToTxt();
