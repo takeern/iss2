@@ -1,0 +1,14 @@
+﻿Studies on Cathodic Protection of Steel Materials in Seawater
+Emmanuel J. Ekott, Ubong I. Etukudo
+
+Risk Management in Steel Plants
+Neha H. Mali, Prof. S. K. Dube
+
+P Diffusion welding of commercial Aluminum to Carbon Steel
+Hassan Abdellatif Osman
+
+Simulation of boiler using PID controller and Automation (PLC & SCADA): A Comprehensive Study
+Nudrat Sufiyan, Archana Yadav, Shama Afrin, Samar Siddiqui
+
+Influence of Chemical Composition on the Mechanical Properties of High Strength Steel Weld Metals for Application in Mooring Components
+Jorge Carlos F. Jorge, Luis Felipe G. Souza, Jorge Luiz S. Couto, Ivani S. Bott
