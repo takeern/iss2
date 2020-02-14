@@ -87,7 +87,7 @@ export default class View extends PureComponent {
                     marginTop: 25,
                     width: 1000,
                 }}>
-                    Copyright © 2019 Bryan House Publishing Limited. All rights reserved.
+                    Copyright © 2020 Bryan House Publishing Limited. All rights reserved.
                 </div>
             </div>
         );
