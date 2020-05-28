@@ -19,7 +19,7 @@ function addTime(str) {
         newArr[1] = 1;
         newArr[0] += 1;
     }
-    if(newArr[0] > 2019) return false;
+    if(newArr[0] > 2025) return false;
     return newArr.join('-');
 }
 

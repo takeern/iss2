@@ -12,3 +12,6 @@ Tetiana Gulchuk
 
 Campus Push, Location, Context, Policy Driven Push Notification Application for Mobile Devices
 Roopkala Ravindran, Nitika Qazi, Vinita Atre, Jayesh Rohira, Sagar Narkar
+
+Rethinking of "Internet+education" under the Guidance of Technology
+Chen Li, Xiaoqing Zhong, Jianyong Cai

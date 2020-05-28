@@ -32,7 +32,9 @@ export default class View extends PureComponent {
             case('introduce'):
                 return this.props.introduce[journal];
             case('articleFees'):
-                return this.props.articleFees;
+		const mail = journal.toLowerCase() + '@bryanhousepub.org';
+                this.props.articleFees[0].p[0] += `<span style="font-familt: Verdana;">${mail}</span>`;
+		return this.props.articleFees;
             default: break;
         }
         return null;
@@ -136,7 +138,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Petroleum and Mining Engineering (JPME)',
                 iSSN: '1110-6506',
-                email: 'submission@bryanhousepub.org',
+                email: 'jpme@bryanhousepub.org',
             },
         ],
         JRSE: [
@@ -149,7 +151,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Research in Science and Engineering (JRSE)',
                 iSSN: '1656-1996',
-                email: 'submission@bryanhousepub.org',
+                email: 'jrse@bryanhousepub.org',
             },
         ],
         JRVE: [
@@ -161,7 +163,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Research in Vocational Education (JRVE)',
                 iSSN: '2408-5170',
-                email: 'submission@bryanhousepub.org',
+                email: 'jrve@bryanhousepub.org',
             },
         ],
         JMME: [
@@ -173,7 +175,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Metallurgy and Materials Engineering (JMME)',
                 iSSN: '2006-1919',
-                email: 'submission@bryanhousepub.org',
+                email: 'jmme@bryanhousepub.org',
             },
         ],
         JGEBF: [
@@ -185,7 +187,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Global Economy, Business and Finance (JGEBF)',
                 iSSN: '2141-5595',
-                email: 'submission@bryanhousepub.org',
+                email: 'jgebf@bryanhousepub.org',
             },
         ],
         JPCE: [
@@ -198,7 +200,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Progress in Civil Engineering (JPCE)',
                 iSSN: ' 2322-0856',
-                email: 'submission@bryanhousepub.org',
+                email: 'jpce@bryanhousepub.org',
             },
         ],
         JCMP: [
@@ -210,7 +212,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Contemporary Medical Practice (JCMP)',
                 iSSN: '2006-2745',
-                email: 'submission@bryanhousepub.org',
+                email: 'jcmp@bryanhousepub.org',
             },
         ],
         JERP: [
@@ -221,7 +223,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Educational Research and Policies (JERP)',
                 iSSN: '2006-1137',
-                email: 'submission@bryanhousepub.org',
+                email: 'jerp@bryanhousepub.org',
             },
         ],
         IJER: [
@@ -233,7 +235,7 @@ View.defaultProps = {
                 ],
                 name: 'International Journal of Environment Research (IJER)',
                 iSSN: '1595-4080',
-                email: 'submission@bryanhousepub.org',
+                email: 'ijer@bryanhousepub.org',
             },
         ],
         JES: [
@@ -246,7 +248,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Energy Science (JES)',
                 iSSN: '1689-8338',
-                email: 'submission@bryanhousepub.org',
+                email: 'jes@bryanhousepub.org',
             },
         ],
         JSSH: [
@@ -259,7 +261,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Social Science and Humanities (JSSH)',
                 iSSN: '1811-1564',
-                email: 'submission@bryanhousepub.org',
+                email: 'jssh@bryanhousepub.org',
             },
         ],
         JAH: [
@@ -272,7 +274,7 @@ View.defaultProps = {
                 ],
                 name: 'Journal of Agriculture and Horticulture (JAH)',
                 iSSN: '1711-8239',
-                email: 'submission@bryanhousepub.org',
+                email: 'jah@bryanhousepub.org',
             },
         ],
     },
@@ -722,8 +724,8 @@ View.defaultProps = {
         {
             title: "",
             p: [
-                'Bryan House Publishing Limited is entirely not-for-profit, so the article processing charge (APC) is free, and there are no article submission charges, page charges, or color charges.',
-            ],
-        },
+		'The manuscript tracking system is suspended. Please sumbit your paper to ',
+	    ],
+	},
     ],
 };
