@@ -22,19 +22,20 @@ export default class View extends PureComponent {
         return null;
     }
     getData(page, journal) {
+        const mail = journal.toLowerCase() + '@bryanhousepub.org';
         switch(page) {
             case('ethics'):
                 return this.props.ethics;
             case('authorGuide'):
+                this.props.authorGuide[1].p[0] += `${mail} are also accepted.`;
                 return this.props.authorGuide;
             case('editorial'):
                 return this.props.editorial[journal];
             case('introduce'):
                 return this.props.introduce[journal];
             case('articleFees'):
-		const mail = journal.toLowerCase() + '@bryanhousepub.org';
                 this.props.articleFees[0].p[0] += `<span style="font-familt: Verdana;">${mail}</span>`;
-		return this.props.articleFees;
+		        return this.props.articleFees;
             default: break;
         }
         return null;
@@ -256,7 +257,7 @@ View.defaultProps = {
                 // title: 'About This Journal',
                 p: [
                     "Journal of Social Science and Humanities (JSSH) is an international, peer-reviewed journal, correspondence in the fields of arts, commerce and social sciences. ",
-                    "The aim of JSSH is to publishes Original research Articles, Short Communications, Review Articles in Linguistics, Commerce, Anthropology, Sociology, Geography, Economics, History, Environmental Studies, Business Administration, Home Science, Public Health, Political Science, Demography, Cultural Studies, Ethnography and Sociolinguistics.",
+                    "The aim of JSSH is to publish Original research Articles, Short Communications, Review Articles in Linguistics, Commerce, Anthropology, Sociology, Geography, Economics, History, Environmental Studies, Business Administration, Home Science, Public Health, Political Science, Demography, Cultural Studies, Ethnography and Sociolinguistics.",
                     "All submitted articles should report original, previously unpublished research results, experimental or theoretical, and will be peer-reviewed. Articles submitted to the journal should meet these criteria and must not be under consideration for publication elsewhere. Manuscripts should follow the style of the journal and are subject to both review and editing.",
                 ],
                 name: 'Journal of Social Science and Humanities (JSSH)',
@@ -655,7 +656,7 @@ View.defaultProps = {
         {
             title: 'Submission',
             p: [
-                'Each manuscript should be submitted by one of its authors through the manuscript tracking system. However, if you have difficulties in accessing the manuscript tracking system, e-mail submissions to submission@bryanhousepub.org are also accepted.',
+                'Each manuscript should be submitted by one of its authors through the manuscript tracking system. However, if you have difficulties in accessing the manuscript tracking system, e-mail submissions to ',
             ],
         },
         {
