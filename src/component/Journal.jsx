@@ -27,14 +27,12 @@ export default class View extends PureComponent {
             case('ethics'):
                 return this.props.ethics;
             case('authorGuide'):
-                this.props.authorGuide[1].p[0] += `${mail} are also accepted.`;
                 return this.props.authorGuide;
             case('editorial'):
                 return this.props.editorial[journal];
             case('introduce'):
                 return this.props.introduce[journal];
             case('articleFees'):
-                this.props.articleFees[0].p[0] += `<span style="font-familt: Verdana;">${mail}</span>`;
 		        return this.props.articleFees;
             default: break;
         }
@@ -725,8 +723,8 @@ View.defaultProps = {
         {
             title: "",
             p: [
-		'The manuscript tracking system is suspended. Please sumbit your paper to ',
-	    ],
-	},
+		        'The manuscript tracking system is suspended. Please sumbit your paper to ',
+	        ],
+	    },
     ],
 };

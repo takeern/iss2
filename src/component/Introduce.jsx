@@ -2,7 +2,8 @@ import React from 'react';
 
 export default (props) => {
     const { data } = props;
-    // console.log(dta)
+    console.log(props)
+    const mail = props.journal.toLowerCase() + '@bryanhousepub.org';
     const showList = data.map((item, index) => {
         const { title, p } = item;
         const pmap = p.map((item, index) => {
@@ -10,7 +11,14 @@ export default (props) => {
                 return (
                     <ul key={index}>{item.map((lidata) => <li>{lidata}</li>)}</ul>
                 );
-            } 
+            }
+            if (props.page === "articleFees" && index === 0) {
+                item += ` ${mail}`;
+            }
+
+            if (title === "Submission" && index === 0) {
+                item += ` ${mail} are also accepted.`;
+            }
             return <div key={index} dangerouslySetInnerHTML={{ __html: item }}></div>;
         });
         return (
