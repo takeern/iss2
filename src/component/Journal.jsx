@@ -86,7 +86,7 @@ export default class View extends PureComponent {
                 index: `/journal?journal=${journal}&page=archive`,
             },
             {
-                name: 'Article Processing Fees',
+                name: 'The Manuscript Tracking System',
                 index: `/journal?journal=${journal}&page=articleFees`,
             },
         ];
@@ -670,7 +670,7 @@ View.defaultProps = {
                 [
                     'Prepare and submit the finalized paper through the manuscript tracking system.',
                     'Sign the copyright form.',
-                    // 'Pay Article Processing Fees',
+                    // 'Pay The Manuscript Tracking System',
                 ],
                 'After typesetting and proof reading, further proofs will be sent to the author(s) before it is finally published.',
             ],
@@ -712,7 +712,7 @@ View.defaultProps = {
             ],
         },
         // {
-        //     title: 'Article Processing Fees',
+        //     title: 'The Manuscript Tracking System',
         //     p: [
         //         "In an open access model, the publication costs of an article are paid from an author's research budget, or by their supporting institution, in the form of Article Processing Charges. These Article Processing Charges replace subscription charges and allow publishers to make the full-text of every published article freely available to all interested readers.",
         //         "Publishing an article in Frontiers in Management Research requires Article Processing Charges that will be billed to the submitting author following the acceptance of an article for publication. Apart from these Article Process Charges, there are no charges for submission and paper review. The fees to be paid following the acceptance of an article are $199. ",
