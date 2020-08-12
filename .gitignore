@@ -15,5 +15,5 @@ package-lock.json
 /src/static/pdf
 *.txt
 dist
-
+*.TXT
 parsePage

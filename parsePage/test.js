@@ -1,4 +1,5 @@
 const fs = require('fs');
+const iconv = require('iconv-lite');
 let year = 2018;
 let mouth = 1;
 let day = 1;
@@ -24,7 +25,7 @@ function addTime(str) {
 }
 
 function getTxt(time, journal, journalData, command, currentTime, firstTime, numLength) {
-    fs.readFile(`./${journal}-${time}.txt`, 'utf8', (err, data) => {
+    fs.readFile(`./${journal}-${time}.txt`, (err, data) => {
         if (err) {
             if(err.code === 'ENOENT') {
                 const newTime = addTime(time);
@@ -35,6 +36,7 @@ function getTxt(time, journal, journalData, command, currentTime, firstTime, num
                 throw err;
             }
         } else {
+	    data = iconv.decode(data, 'GBK');
             const parseData = parseTxt(data);
             currentTime = time;
             if(!firstTime) firstTime = time;
