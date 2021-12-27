@@ -25,7 +25,7 @@ function addTime(str) {
 }
 
 function getTxt(time, journal, journalData, command, currentTime, firstTime, numLength) {
-    fs.readFile(`./${journal}-${time}.txt`, (err, data) => {
+    fs.readFile(`./${journal}-${time}.txt`, 'utf8', (err, data) => {
         if (err) {
             if(err.code === 'ENOENT') {
                 const newTime = addTime(time);
