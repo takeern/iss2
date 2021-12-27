@@ -24,20 +24,28 @@ function addTime(str) {
     return newArr.join('-');
 }
 
+const getFileType = (filename) => {
+    var buffer = fs.readFileSync(filename);
+    if (buffer[0]==0xff&&buffer[1]==0xfe) {
+        return ('unicode')
+    } else if (buffer[0]==0xfe&&buffer[1]==0xff) {
+    　　return ('unicode')
+    } else if(buffer[0]==0xef&&buffer[1]==0xbb) {
+　　　  return ('utf-8')
+    } else {
+    　　return ('gbk')
+    }
+}
+
 function getTxt(time, journal, journalData, command, currentTime, firstTime, numLength) {
-    fs.readFile(`./${journal}-${time}.txt`, 'utf8', (err, data) => {
-        if (err) {
-            if(err.code === 'ENOENT') {
-                const newTime = addTime(time);
-                if(newTime) return getTxt(newTime, journal, journalData, command, currentTime, firstTime, numLength);
-                const writeData = show(journalData, command, currentTime, firstTime, numLength);
-                writeFile(journal, command, writeData);
-            }else {
-                throw err;
-            }
-        } else {
-	    data = iconv.decode(data, 'GBK');
-            const parseData = parseTxt(data);
+    const filename = `./${journal}-${time}.txt`;
+
+    try {
+        const type = getFileType(filename);
+        var fileStr = fs.readFileSync(filename, {encoding:'binary'});
+        var buf = Buffer.from(fileStr, 'binary');
+        var data = iconv.decode(buf, type);
+        const parseData = parseTxt(data);
             currentTime = time;
             if(!firstTime) firstTime = time;
 
@@ -50,11 +58,27 @@ function getTxt(time, journal, journalData, command, currentTime, firstTime, num
             numLength += 1;
 
             const newTime = addTime(time);
-            if(newTime) return getTxt(newTime, journal, journalData, command, currentTime, firstTime, numLength);
+            if(newTime) {
+                getTxt(newTime, journal, journalData, command, currentTime, firstTime, numLength)
+                return
+            };
             const writeData = show(journalData, command, currentTime, firstTime, numLength);
             writeFile(journal, command, writeData);
-        }
-    });
+    } catch (err) {
+        if (err) {
+            if(err.code === 'ENOENT') {
+                const newTime = addTime(time);
+                if(newTime) {
+                    getTxt(newTime, journal, journalData, command, currentTime, firstTime, numLength)
+                    return;
+                };
+                const writeData = show(journalData, command, currentTime, firstTime, numLength);
+                writeFile(journal, command, writeData);
+            }else {
+                throw err;
+            }
+        } 
+    }
 }
 
 function parseTxt (data) {
