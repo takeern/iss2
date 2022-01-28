@@ -58,6 +58,15 @@ export default class Issue extends Component {
                     <p style={{
                         marginLeft: 30,
                     }}>{item.name}</p>
+                    {
+                        item.doi && 
+                        <div style={{
+                            marginLeft: 30,
+                            textIndent: 0,
+                        }}>
+                            DOI: <a href={`./src/static/pdf/${this.props.journal}-${time}_${index + 1}.pdf`} download={`${Date.now()}_${Math.floor(Math.random() * 1000)}.pdf`} target='_blank'> {item.doi}</a>
+                        </div>
+                    }
                 </div>
             );
         });

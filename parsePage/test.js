@@ -45,7 +45,7 @@ function getTxt(time, journal, journalData, command, currentTime, firstTime, num
         var fileStr = fs.readFileSync(filename, {encoding:'binary'});
         var buf = Buffer.from(fileStr, 'binary');
         var data = iconv.decode(buf, type);
-        const parseData = parseTxt(data);
+        const parseData = parseTxt(data, filename);
             currentTime = time;
             if(!firstTime) firstTime = time;
 
@@ -81,15 +81,44 @@ function getTxt(time, journal, journalData, command, currentTime, firstTime, num
     }
 }
 
-function parseTxt (data) {
+function parseTxt (data, filename) {
     const arr = [];
-    const list = data.split(/(\r\n)+/).filter(removeNO);
-    // console.log(list.length, time)
-    for(let i = 0, len = list.length/2; i < len; i ++) {
-        arr.push({
-            title: list[i * 2],
-            name: list[i * 2 + 1],
-        });
+    const list = data.split(/(\r\n|\n)+/).filter(removeNO);
+    // console.log(list, time)
+    let version = 0;
+    let end = list.length/2;
+    if (list.length && !isNaN(parseInt(list[0], 10))) {
+        version = parseInt(list[0], 10);
+    }
+
+    if (version === 1) {
+        list.shift();
+        end = list.length / 3;
+    }
+    // console.log(version)
+    for (let i = 0; i < end; i ++) {
+        switch (version) {
+            case 0:
+                arr.push({
+                    title: list[i * 2],
+                    name: list[i * 2 + 1],
+                });
+                break;
+            case 1:
+                arr.push({
+                    title: list[i * 3],
+                    name: list[i * 3 + 1],
+                    doi: list[i * 3 + 2],
+                });
+                break;
+            default:
+                arr.push({
+                    title: list[i * 2],
+                    name: list[i * 2 + 1],
+                });
+                console.log('unhander version', version, filename);
+                break;
+        }
     }
     // console.log(arr)
     return arr;
